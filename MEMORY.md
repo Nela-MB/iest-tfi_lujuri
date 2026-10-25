@@ -1,4 +1,4 @@
-# MEMORY: memoria del proyecto LujUri Boutique
+# memory: memoria del proyecto LujUri Boutique
 
 > Responde a la pregunta: **¿Qué recuerda la IA de una sesión a otra?**
 > Claude lee este archivo al empezar cada sesión, junto con `AGENTS.md`. Se actualiza a medida que el proyecto avanza.
@@ -10,7 +10,7 @@
 | Nombre | LujUri Boutique (siempre **LujUri**, junto y con la U mayúscula) |
 | Qué es | Catálogo online de ropa para mujer, hombre y niños con pedido por WhatsApp |
 | Eslogan | "Tu estilo, con cariño." |
-| Stack | Next.js (React) + PostgreSQL (Neon) + GitHub + Vercel |
+| Stack | Next.js (React) + PostgreSQL (Neon) + Vitest + GitHub + Vercel |
 | IA de desarrollo | Claude (Anthropic) |
 | Idioma | Textos en español rioplatense (voseo); código en español sin tildes |
 
@@ -30,7 +30,9 @@
 
 - [x] Identidad de marca definida (nombre, paleta, tipografías y tono).
 - [x] Kit de especificación redactado (`AGENTS.md` y los once archivos de `docs/`).
-- [ ] Logo y paleta cargados en `marca/`.
+- [x] Logo (circular, horizontal e isotipo), favicon y paleta definidos en `marca/`.
+- [x] Repositorio público `iest-tfi_lujuri` creado en GitHub.
+- [ ] Constitución, comandos y skills del agente (Actividad 1 del TFI).
 - [ ] Proyecto Next.js creado.
 - [ ] Base de datos creada en Neon.
 - [ ] Catálogo, pedido y contacto programados.
@@ -40,7 +42,7 @@
 
 ## Datos que faltan (preguntar, no inventar)
 
-- [ ] Número real de WhatsApp del negocio (va en `WHATSAPP_NUMERO`).
+- [ ] Número real de WhatsApp del negocio (va solo en `.env.local` y Vercel, en `WHATSAPP_NUMERO`).
 - [ ] Ciudad o zona de entrega (para `09-SEO.md` y `/contacto`).
 - [ ] Catálogo real: nombres, fotos, talles, colores y precios.
 - [ ] Horarios de atención.
@@ -57,6 +59,7 @@
 | Fecha | Qué se hizo | Qué sigue |
 |---|---|---|
 | 09-10-2026 | Se redactó el kit de especificación y el informe del TP N° 3 | Cargar el logo en `marca/` y empezar la Etapa 1 de `08-TAREAS.md` |
+| 20-10-2026 | Se creó el repositorio del TFI, se corrigió el kit (carpeta `src/`, Vitest, variable `WHATSAPP_NUMERO`, número real fuera del repo) | Constitución, comandos, skills y primera spec |
 
 ## Cómo usar este archivo con Claude
 
@@ -65,7 +68,7 @@ Claude Code lee automáticamente un archivo llamado CLAUDE.md.
 Si se usa Claude Code, crear CLAUDE.md en la raíz con estas dos líneas:
 
 @AGENTS.md
-@MEMORY.md
+@memory.md
 ```
 
-> Al terminar una sesión, pedirle a Claude: "Actualizá MEMORY.md con lo que hicimos hoy".
+> Al terminar una sesión, pedirle a Claude: "Actualizá memory.md con lo que hicimos hoy".

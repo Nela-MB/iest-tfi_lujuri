@@ -18,12 +18,13 @@
 ```bash
 # .env.local  (NO se sube a GitHub)
 DATABASE_URL=postgresql://usuario:clave@host/basededatos
-WHATSAPP_NUMERO=+543837524469
+WHATSAPP_NUMERO=+54XXXXXXXXXX
 ```
 
 - `.env.local` está en `.gitignore`.
 - Ninguna variable de datos sensibles lleva el prefijo `NEXT_PUBLIC_`.
 - En producción se cargan desde el panel de Vercel.
+- El repositorio es **público**: en los archivos solo van valores de ejemplo, nunca el número ni las claves reales.
 
 ## SQL seguro
 
@@ -46,13 +47,13 @@ const filas = await sql`SELECT * FROM productos WHERE categoria = ${cat}`;
 | `contacto` (consulta) | Obligatorio, hasta 120 caracteres |
 | `mensaje` (consulta) | Obligatorio, hasta 1000 caracteres |
 
-- Se valida **siempre en el servidor** (`app/api/`): el navegador se puede manipular.
+- Se valida **siempre en el servidor** (`src/app/api/`): el navegador se puede manipular.
 - Los errores devuelven mensajes amables, sin detalles técnicos ni de la base.
 
 ## Total del pedido
 
 - El navegador envía solo los **identificadores** y las **cantidades**.
-- `app/api/pedidos/route.js` busca los precios en la base y calcula el total.
+- `src/app/api/pedidos/route.js` busca los precios en la base y calcula el total.
 - Nunca se confía en un precio o total que venga del navegador.
 
 ## Qué nunca debe llegar al navegador
@@ -65,7 +66,14 @@ const filas = await sql`SELECT * FROM productos WHERE categoria = ${cat}`;
 ## Reglas para el código
 
 - Nunca usar `dangerouslySetInnerHTML` (React ya escapa el texto).
-- La base solo se usa desde `lib/db.js`.
+- La base solo se usa desde `src/lib/db.js`.
 - Usar HTTPS (Vercel lo activa automáticamente).
 - Si una clave se expone por error, **cambiarla de inmediato** en Neon y Vercel.
 - Mantener las dependencias actualizadas con `npm audit`.
+
+## Uso seguro de la IA
+
+- Nunca pegar en un prompt claves, contraseñas, `DATABASE_URL` ni datos personales reales de clientas.
+- Leer y entender todo el código antes de aceptarlo; no autorizar comandos sin mirarlos.
+- Leer completas las skills externas antes de instalarlas.
+- Antes de cada commit, revisar que no haya secretos en los archivos que se suben.
