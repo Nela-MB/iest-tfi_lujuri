@@ -7,7 +7,7 @@
 
 ```text
 iest-tfi_lujuri/
-├── AGENTS.md · CLAUDE.md · memory.md · README.md
+├── AGENTS.md · memory.md · README.md
 ├── docs/                        ← especificaciones y documentos del proceso
 │   ├── CONSTITUCION.md · PROMPTS.md · DECLARACION-IA.md
 │   ├── IDENTIDAD-MARCA.md
@@ -16,9 +16,12 @@ iest-tfi_lujuri/
 │   ├── 001-catalogo/            ← spec · clarificacion · plan · tasks · verificacion
 │   ├── 002-pedido-whatsapp/
 │   └── 003-consultas/
-├── .claude/                     ← arnés del agente (Claude Code)
-│   ├── commands/                ← /spec · /clarificar · /verificar
-│   └── skills/                  ← verificar-criterios y otra skill propia
+├── .github/                     ← arnés del agente (VS Code)
+│   ├── copilot-instructions.md  ← instrucciones permanentes (equivale a CLAUDE.md)
+│   └── prompts/                 ← comandos: spec · clarificar · verificar (.prompt.md)
+├── .agents/skills/              ← skills propias
+│   ├── verificar-criterios/SKILL.md
+│   └── revisar-marca/SKILL.md
 ├── src/
 │   ├── app/
 │   │   ├── layout.js            ← encabezado, pie, fuentes y <html lang="es">
@@ -69,7 +72,8 @@ iest-tfi_lujuri/
 |---|---|
 | `docs/` | Especificaciones del TP N° 3 y documentos del proceso (constitución, prompts, declaración de IA) |
 | `specs/` | Spec, clarificación, plan, tareas y verificación de cada funcionalidad |
-| `.claude/` | Comandos y skills que usa el agente de IA |
+| `.github/` | Instrucciones permanentes y comandos (`/spec`, `/clarificar`, `/verificar`) del agente |
+| `.agents/skills/` | Skills propias del proyecto |
 | `src/app/` | Páginas del sitio y rutas de la API. Cada carpeta es una dirección web |
 | `src/app/api/` | Código del servidor: habla con la base y valida los datos |
 | `src/components/` | Piezas de pantalla reutilizables |

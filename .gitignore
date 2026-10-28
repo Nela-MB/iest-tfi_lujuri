@@ -1,0 +1,12 @@
+# dependencias y compilación
+node_modules/
+.next/
+
+# secretos: nunca se suben
+.env
+.env.local
+.env.*.local
+
+# sistema
+.DS_Store
+Thumbs.db

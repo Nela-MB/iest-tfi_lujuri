@@ -11,7 +11,7 @@
 | Qué es | Catálogo online de ropa para mujer, hombre y niños con pedido por WhatsApp |
 | Eslogan | "Tu estilo, con cariño." |
 | Stack | Next.js (React) + PostgreSQL (Neon) + Vitest + GitHub + Vercel |
-| IA de desarrollo | Claude (Anthropic) |
+| IA de desarrollo | Agente del chat de VS Code (GitHub Copilot); Claude (Anthropic) en chat aparte para specs, guiones e informe |
 | Idioma | Textos en español rioplatense (voseo); código en español sin tildes |
 
 ## Decisiones tomadas
@@ -32,7 +32,9 @@
 - [x] Kit de especificación redactado (`AGENTS.md` y los once archivos de `docs/`).
 - [x] Logo (circular, horizontal e isotipo), favicon y paleta definidos en `marca/`.
 - [x] Repositorio público `iest-tfi_lujuri` creado en GitHub.
-- [ ] Constitución, comandos y skills del agente (Actividad 1 del TFI).
+- [x] Constitución redactada (`docs/CONSTITUCION.md`).
+- [x] Comandos `/spec`, `/clarificar`, `/verificar` y skills `verificar-criterios` y `revisar-marca` creados.
+- [ ] Matriz de herramientas (Anexo I) y `docs/PROMPTS.md`.
 - [ ] Proyecto Next.js creado.
 - [ ] Base de datos creada en Neon.
 - [ ] Catálogo, pedido y contacto programados.
@@ -61,14 +63,13 @@
 | 09-10-2026 | Se redactó el kit de especificación y el informe del TP N° 3 | Cargar el logo en `marca/` y empezar la Etapa 1 de `08-TAREAS.md` |
 | 20-10-2026 | Se creó el repositorio del TFI, se corrigió el kit (carpeta `src/`, Vitest, variable `WHATSAPP_NUMERO`, número real fuera del repo) | Constitución, comandos, skills y primera spec |
 
-## Cómo usar este archivo con Claude
+## Cómo usar este archivo con el agente
+
+El agente de VS Code lee `.github/copilot-instructions.md`, que le indica leer `AGENTS.md`, `memory.md` y `docs/CONSTITUCION.md`.
 
 ```text
-Claude Code lee automáticamente un archivo llamado CLAUDE.md.
-Si se usa Claude Code, crear CLAUDE.md en la raíz con estas dos líneas:
-
-@AGENTS.md
-@memory.md
+Al terminar una sesión, pedirle al agente:
+"Actualizá memory.md con lo que hicimos hoy".
 ```
 
-> Al terminar una sesión, pedirle a Claude: "Actualizá memory.md con lo que hicimos hoy".
+> Una tarea, una conversación: lo que haya que recordar va acá, no al chat.

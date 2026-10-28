@@ -10,7 +10,10 @@
 
 ## IA que trabaja en este proyecto
 
-La IA que se usa para desarrollar es **Claude** (Anthropic). Claude debe:
+- **En el editor:** el agente del chat de VS Code (GitHub Copilot), que programa, corre los tests y propone los commits.
+- **Fuera del editor:** Claude (Anthropic), usado en conversaciones aparte para redactar specs, planes, guiones y el informe.
+
+En todos los casos, el agente debe:
 
 - Leer este archivo y `memory.md` **al comenzar cada sesión**, y `docs/CONSTITUCION.md` antes de cada spec, plan o tarea.
 - Seguir las especificaciones de `docs/` y `specs/` como única fuente de verdad del proyecto.
@@ -32,7 +35,7 @@ Cada funcionalidad vive en `specs/NNN-nombre/` y pasa por estas fases, en orden:
 | 6. Validación | `/verificar` | `verificacion.md` |
 | 7. Cambio | — | spec actualizada y commits |
 
-Los comandos están en `.claude/commands/` y las skills propias en `.claude/skills/` (`verificar-criterios` y otra más).
+Los comandos están en `.github/prompts/` (se escriben con `/` en el chat) y las skills propias en `.agents/skills/` (`verificar-criterios` y `revisar-marca`). Las instrucciones permanentes del editor están en `.github/copilot-instructions.md`.
 
 ## Antes de escribir código, leé
 

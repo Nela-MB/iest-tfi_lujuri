@@ -1,0 +1,36 @@
+/* Variables de la marca: copiadas de docs/IDENTIDAD-MARCA.md.
+   Es el ÚNICO archivo donde se escriben códigos de color. */
+:root {
+  --color-principal:     #C2415F; /* Rosa Frambuesa */
+  --color-detalle:       #E0607E; /* Rosa Coral */
+  --color-rosa-suave:    #F6CAD3; /* Rosa Empolvado */
+  --color-acento:        #8CCBEA; /* Celeste Cielo */
+  --color-celeste-suave: #CBE8F7; /* Celeste Claro */
+  --color-linea:         #4F8FBF; /* Azul Percha (solo líneas) */
+  --color-texto:         #2B4260; /* Azul Noche */
+  --color-texto-apoyo:   #5B6B82; /* Azul Grisáceo */
+  --color-fondo:         #FBF5EF; /* Crema */
+  --color-whatsapp:      #25D366; /* funcional */
+
+  --fuente-marca:   var(--font-sacramento), cursive;
+  --fuente-titulos: var(--font-cormorant), Georgia, serif;
+  --fuente-texto:   var(--font-montserrat), Arial, sans-serif;
+  --radio-borde: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto);
+}
+
+a { color: var(--color-principal); }

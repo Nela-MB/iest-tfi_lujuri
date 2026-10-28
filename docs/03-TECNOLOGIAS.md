@@ -14,7 +14,7 @@
 | Pruebas | **Vitest** | Tests automáticos con `npm test` | Es liviano, funciona con JavaScript moderno y permite probar totales, validaciones y filtros antes de programarlos |
 | Repositorio | **Git + GitHub** | Guarda el código y su historial | Permite volver a una versión anterior y mostrar un commit por tarea |
 | Publicación | **Vercel** | Publica el sitio con HTTPS | Se actualiza solo con cada `git push` y es gratis para proyectos chicos |
-| IA | **Claude** (Anthropic) | Asistente que genera y revisa código a partir de las especificaciones | Lee `AGENTS.md` y `memory.md` en cada sesión y respeta las reglas de la marca, la base y la seguridad |
+| IA | **Agente de VS Code** (GitHub Copilot) y **Claude** (Anthropic) en chat aparte | El agente del editor programa y corre tests; Claude ayuda a redactar specs, guiones e informe | El agente lee `AGENTS.md`, `memory.md` y `.github/copilot-instructions.md` en cada sesión; Claude no necesita plan de Claude Code |
 
 ## Por qué le sirve a LujUri
 
@@ -38,7 +38,7 @@ Vercel · Next.js
         ▼
 PostgreSQL en Neon          → prendas, talles, pedidos, consultas
 
-Computadora (editor + Claude) ──git push──► GitHub ──publica──► Vercel
+Computadora (VS Code + agente) ──git push──► GitHub ──publica──► Vercel
 ```
 
 > La contraseña de la base de datos y el número de WhatsApp viven en el servidor: **nunca llegan al navegador**.
