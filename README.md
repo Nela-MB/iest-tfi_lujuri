@@ -3,7 +3,7 @@
 Catálogo online de ropa para mujer, hombre y niños, con pedido por WhatsApp.
 Trabajo Final Integrador de Inteligencia Artificial, desarrollado con agentes de IA siguiendo el Desarrollo Guiado por Especificaciones.
 
-- **Sitio publicado:** _(pendiente: URL de Vercel)_
+- **Sitio publicado:** _(https://iest-tfi-lujuri.vercel.app/)_
 - **Estudiante:** Barrionuevo, Marianela
 - **Carrera:** Tecnicatura Superior en Desarrollo de Software, 3.er año
 - **Institución:** Instituto de Estudios Superiores de Tinogasta

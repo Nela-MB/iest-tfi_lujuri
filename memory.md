@@ -13,6 +13,7 @@
 | Stack | Next.js (React) + PostgreSQL (Neon) + Vitest + GitHub + Vercel |
 | IA de desarrollo | Agente del chat de VS Code (GitHub Copilot); Claude (Anthropic) en chat aparte para specs, guiones e informe |
 | Idioma | Textos en español rioplatense (voseo); código en español sin tildes |
+| Sitio publicado | https://iest-tfi-lujuri.vercel.app/ |
 
 ## Decisiones tomadas
 
@@ -35,10 +36,10 @@
 - [x] Constitución redactada (`docs/CONSTITUCION.md`).
 - [x] Comandos `/spec`, `/clarificar`, `/verificar` y skills `verificar-criterios` y `revisar-marca` creados.
 - [ ] Matriz de herramientas (Anexo I) y `docs/PROMPTS.md`.
-- [ ] Proyecto Next.js creado.
+- [x] Proyecto Next.js creado.
 - [ ] Base de datos creada en Neon.
 - [ ] Catálogo, pedido y contacto programados.
-- [ ] Sitio publicado en Vercel.
+- [x] Sitio publicado en Vercel.
 
 > La lista detallada de tareas está en `docs/08-TAREAS.md`.
 
@@ -62,6 +63,7 @@
 |---|---|---|
 | 09-10-2026 | Se redactó el kit de especificación y el informe del TP N° 3 | Cargar el logo en `marca/` y empezar la Etapa 1 de `08-TAREAS.md` |
 | 20-10-2026 | Se creó el repositorio del TFI, se corrigió el kit (carpeta `src/`, Vitest, variable `WHATSAPP_NUMERO`, número real fuera del repo) | Constitución, comandos, skills y primera spec |
+| 28-10-2026 | Se creó el proyecto Next.js con la marca y se publicó en Vercel | Crear la base en Neon y empezar la spec del catálogo |
 
 ## Cómo usar este archivo con el agente
 
