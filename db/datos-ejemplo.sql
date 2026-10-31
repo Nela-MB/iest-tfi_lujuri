@@ -1,3 +1,4 @@
+-- db/datos-ejemplo.sql (precios en 0 como marcador)
 INSERT INTO productos (codigo, nombre, descripcion, categoria, precio, destacado) VALUES
   ('MUJ-001', 'Remera lisa',        'Remera de algodón, corte clásico', 'mujer',  0, TRUE),
   ('HOM-001', 'Remera básica',      'Remera cómoda para todos los días', 'hombre', 0, FALSE),

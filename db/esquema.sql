@@ -1,3 +1,4 @@
+-- db/esquema.sql
 CREATE TABLE productos (
   id          SERIAL PRIMARY KEY,
   codigo      VARCHAR(20) UNIQUE,
