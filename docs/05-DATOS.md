@@ -23,7 +23,7 @@
 | `descripcion` | `TEXT` | Detalle de la prenda |
 | `categoria` | `VARCHAR(10)` | `mujer`, `hombre` o `ninos` |
 | `precio` | `NUMERIC(12,2)` | Por defecto `0` (marcador) |
-| `imagen` | `VARCHAR(200)` | Ruta en `public/img/prendas/` |
+| `imagen` | `VARCHAR(200)` | Ruta en `public/media/prendas/` |
 | `destacado` | `BOOLEAN` | Aparece en el inicio |
 | `activo` | `BOOLEAN` | Si está visible en el catálogo |
 

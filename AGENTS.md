@@ -66,7 +66,7 @@ El logo y la paleta están en la carpeta `public/marca/`.
 
 - Usar **siempre** las variables CSS de `IDENTIDAD-MARCA.md` (por ejemplo `var(--color-principal)`).
 - Escribir el nombre de la marca siempre como **LujUri** (junto, con la U mayúscula).
-- Acceder a la base de datos **solo** desde `src/lib/db.js`.
+- Abrir la base de datos **solo** desde `src/lib/db.js` y escribir las consultas **solo** en módulos de `src/lib/` (por ejemplo `productos.js`).
 - Escribir las consultas SQL **siempre con parámetros**, nunca pegando texto del usuario.
 - Calcular los totales del pedido en el **servidor**, con los precios de la base.
 - Escribir los textos del sitio en español rioplatense (voseo), con el tono de la marca.

@@ -25,6 +25,9 @@
 | Total del pedido calculado en el servidor | El navegador se puede manipular | `10-SEGURIDAD.md` |
 | Precios en `$ 0` como marcador | No inventar datos | `AGENTS.md` |
 | Pago por WhatsApp, sin pago online | Fuera del alcance por ahora | `01-CONTEXTO.md` |
+| Fotos de prendas en `public/media/prendas/` | Había dos rutas distintas en `05` y `04` | `specs/001-catalogo/clarificacion.md` |
+| Consultas de prendas en `src/lib/productos.js` | Un solo módulo usado por páginas y API; menos código y mejor SEO | `docs/CONSTITUCION.md` |
+| «Quedan pocas» con 1 a 3 unidades de stock total | Umbral simple y fácil de probar | `specs/001-catalogo/clarificacion.md` |
 
 ## Estado actual
 
@@ -36,7 +39,7 @@
 - [x] Comandos `/spec`, `/clarificar`, `/verificar` y skills `verificar-criterios` y `revisar-marca` creados.
 - [ ] Matriz de herramientas (Anexo I) y `docs/PROMPTS.md`.
 - [ ] Proyecto Next.js creado.
-- [ ] Base de datos creada en Neon.
+- [x] Base de datos creada en Neon (5 tablas y 3 prendas de prueba).
 - [ ] Catálogo, pedido y contacto programados.
 - [ ] Sitio publicado en Vercel.
 

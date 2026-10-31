@@ -1,7 +1,7 @@
 # Spec 001: Catálogo de prendas
 
 > Fase 1 del ciclo SDD. Cubre los requerimientos **RF01, RF02, RF03, RF04 y RF10** de `docs/02-REQUERIMIENTOS.md`.
-> Borrador redactado con ayuda de Claude (chat aparte) a partir de las especificaciones del proyecto. Las decisiones finales las toma la estudiante en `clarificacion.md`.
+> Borrador redactado con ayuda de Claude (chat aparte) y actualizado tras la clarificación (ver `clarificacion.md`). Las decisiones finales las tomó la estudiante.
 
 ## 1. Contexto
 
@@ -22,20 +22,21 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 | ID | Requisito | RF |
 |---|---|---|
 | R1 | Cuando la clienta abre `/catalogo`, el sistema deberá mostrar todas las prendas activas con foto, nombre y precio | RF01 |
-| R2 | Si una prenda no tiene imagen, entonces el sistema deberá mostrar una imagen de reemplazo con el isotipo de la marca | RF01 |
-| R3 | El sistema deberá mostrar los precios con el formato `$ 0,00` | RF01 |
+| R2 | Si una prenda no tiene imagen, entonces el sistema deberá mostrar el isotipo de `public/marca/` como imagen de reemplazo | RF01 |
+| R3 | El sistema deberá mostrar los precios con el formato `$ 0,00`; mientras los precios reales no estén cargados, el valor `$ 0,00` funciona como marcador | RF01 |
 | R4 | Cuando la clienta elige una categoría (mujer, hombre o niños), el sistema deberá mostrar solo las prendas de esa categoría | RF02 |
 | R5 | Cuando la clienta elige "Todas", el sistema deberá mostrar las prendas de todas las categorías | RF02 |
-| R6 | Cuando la clienta escribe en el buscador, el sistema deberá mostrar las prendas cuyo nombre contenga el texto, sin distinguir mayúsculas de minúsculas | RF03 |
+| R6 | Cuando la clienta escribe en el buscador, el sistema deberá mostrar las prendas cuyo nombre contenga el texto, sin distinguir mayúsculas ni tildes | RF03 |
 | R7 | Si no hay prendas que coincidan con el filtro o la búsqueda, entonces el sistema deberá mostrar el mensaje «No encontramos prendas con esa búsqueda» | RF03 |
-| R8 | Mientras todas las variantes de una prenda tengan stock 0, el sistema deberá mostrar la etiqueta «Por ahora no tenemos stock de este talle» | RF10 |
-| R9 | Mientras el stock total de una prenda sea bajo (umbral por definir en la clarificación), el sistema deberá mostrar la etiqueta «Quedan pocas» | RF10 |
+| R8 | Mientras una prenda no tenga variantes o todas tengan stock 0, el sistema deberá mostrar la etiqueta «Por ahora no tenemos stock de este talle» | RF10 |
+| R9 | Mientras el stock total de una prenda sea de 1 a 3 unidades, el sistema deberá mostrar la etiqueta «Quedan pocas» | RF10 |
 | R10 | Cuando la clienta abre `/catalogo/[id]`, el sistema deberá mostrar foto, nombre, descripción, precio, talles y colores de la prenda | RF04 |
 | R11 | Si el identificador no existe o la prenda está inactiva, entonces el sistema deberá mostrar una página «No encontramos esta prenda» con un enlace al catálogo | RF04 |
 | R12 | Si la categoría recibida no es `mujer`, `hombre` o `ninos`, o el texto de búsqueda supera 60 caracteres, entonces el sistema deberá responder con un error 400 y un mensaje amable, sin detalles técnicos | Seguridad |
-| R13 | El sistema deberá leer los datos solo desde `src/app/api/productos/` y `src/lib/db.js`, con consultas SQL parametrizadas | Constitución |
+| R13 | El sistema deberá obtener los datos de las prendas solo desde `src/lib/productos.js`, que usa `src/lib/db.js` con consultas SQL parametrizadas; las páginas y la API llaman a ese módulo | Constitución |
 | R14 | Si la base de datos no responde, entonces el sistema deberá mostrar el mensaje «No pudimos cargar el catálogo, probá de nuevo en un rato» | RNF |
 | R15 | El sistema deberá mostrar la grilla en 1 columna en celular, 3 en tablet y 4 en computadora, con texto alternativo en cada imagen | RNF |
+| R16 | Mientras el stock total de una prenda sea de 4 unidades o más, el sistema deberá mostrar la etiqueta «Disponible» | RF10 |
 
 ## 4. Casos límite
 
@@ -45,7 +46,7 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 - Nombre de prenda muy largo en la tarjeta.
 - Prenda con algunas variantes sin stock y otras con stock.
 - Prenda sin ninguna variante cargada.
-- Texto de búsqueda con tildes («pantalon» frente a «pantalón»).
+- Texto de búsqueda con tildes («pantalon» frente a «pantalón»): debe encontrar la misma prenda (R6).
 
 ## 5. Fuera de alcance
 
@@ -56,7 +57,7 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 
 ## 6. Criterios de finalización
 
-- [ ] Los requisitos R1 a R15 están implementados o justificados como pendientes.
+- [ ] Los requisitos R1 a R16 están implementados o justificados como pendientes.
 - [ ] Hay tests automáticos para el filtro, la búsqueda, el cálculo del estado de stock y la validación de la API.
 - [ ] `npm test` y `npm run build` pasan sin errores.
 - [ ] Ningún color escrito a mano fuera de `globals.css`.

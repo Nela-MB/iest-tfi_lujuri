@@ -49,6 +49,11 @@ iest-tfi_lujuri/
 │   │   └── PedidoContext.js     ← estado del pedido compartido entre páginas
 │   └── lib/
 │       ├── db.js                ← única conexión a la base (DATABASE_URL)
+│       ├── productos.js         ← única consulta de prendas (usa db.js, SQL parametrizado)
+│       ├── filtros.js           ← filtra por categoría y búsqueda
+│       ├── normalizar.js        ← quita tildes y mayúsculas para comparar textos
+│       ├── stock.js             ← calcula el estado de stock de una prenda
+│       ├── formato.js           ← formato de precios ($ 0,00)
 │       ├── whatsapp.js          ← arma el mensaje y el enlace de WhatsApp (servidor)
 │       └── validaciones.js      ← reglas de validación de pedidos y consultas
 ├── tests/                       ← tests automáticos con Vitest
@@ -57,7 +62,7 @@ iest-tfi_lujuri/
 │   └── datos-ejemplo.sql        ← prendas de prueba con precio $ 0
 ├── public/
 │   ├── marca/                   ← logo, favicon y paleta
-│   └── media/                   ← fotos y piezas generadas con IA
+│   └── media/                   ← fotos de prendas (`prendas/`) y piezas generadas con IA
 ├── multimedia/
 │   ├── imagenes/ · video/ · graficos/
 │   └── FICHAS-IA.md             ← una ficha por pieza generada con IA
@@ -79,6 +84,7 @@ iest-tfi_lujuri/
 | `src/components/` | Piezas de pantalla reutilizables |
 | `src/context/` | Guarda el pedido mientras la clienta navega |
 | `src/lib/db.js` | **Único** lugar donde se conecta a PostgreSQL |
+| `src/lib/productos.js` | **Único** lugar donde se escriben las consultas de prendas |
 | `src/lib/whatsapp.js` | Genera el texto del pedido y el enlace `wa.me` en el servidor |
 | `src/lib/validaciones.js` | Funciones puras de validación, fáciles de probar |
 | `tests/` | Pruebas automáticas de totales, validaciones, filtros y mensaje de WhatsApp |
@@ -99,8 +105,8 @@ iest-tfi_lujuri/
 
 ## Reglas de organización
 
-- Las **páginas** no hablan con la base: piden los datos a las rutas de `src/app/api/`.
-- Solo `src/lib/db.js` abre la conexión con PostgreSQL.
+- Las **páginas y la API** no escriben SQL: piden los datos a los módulos de `src/lib/` (por ejemplo `productos.js`).
+- Solo `src/lib/db.js` abre la conexión con PostgreSQL y solo los módulos de `src/lib/` lo usan.
 - Los **componentes** no tienen colores escritos a mano: usan las variables de `globals.css`.
 - El **total del pedido** se calcula en `src/app/api/pedidos/route.js` con los precios de la base, nunca con los que manda el navegador.
 - El **número de WhatsApp** no sale del servidor: la API devuelve el enlace ya armado.
