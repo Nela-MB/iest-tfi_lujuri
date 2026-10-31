@@ -6,7 +6,7 @@
 
 - [x] **T1. `normalizarTexto`** (R6). Escribir primero `tests/normalizar.test.js` y después `src/lib/normalizar.js`.
   - Listo cuando: «Pantalón» y «pantalon» dan el mismo resultado y el test pasa.
-- [ ] **T2. `calcularEstadoStock`** (R8, R9, R16). Test primero.
+- [x] **T2. `calcularEstadoStock`** (R8, R9, R16). Test primero.
   - Listo cuando: sin variantes o stock 0 da «sin stock»; de 1 a 3, «quedan pocas»; de 4 o más, «disponible».
 - [ ] **T3. Validaciones** (R12). Test primero para categoría y búsqueda.
   - Listo cuando: acepta `mujer`, `hombre` y `ninos`, rechaza otras, y rechaza búsquedas de más de 60 caracteres.
