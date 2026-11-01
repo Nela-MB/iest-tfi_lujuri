@@ -1,0 +1,28 @@
+.formulario { display: flex; flex-direction: column; gap: 0.25rem; }
+.etiqueta { font-weight: 600; color: var(--color-texto); }
+.fila { display: flex; gap: 0.5rem; }
+.campo {
+  flex: 1;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border: 2px solid var(--color-acento);
+  border-radius: var(--radio-borde);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  color: var(--color-texto);
+  background: var(--color-blanco);
+}
+.campo:focus { border-color: var(--color-principal); }
+.boton {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 1.25rem;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: var(--radio-borde);
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  cursor: pointer;
+}
+.boton:hover { background: var(--color-detalle); }

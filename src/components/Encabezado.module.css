@@ -1,0 +1,23 @@
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-fondo);
+  border-bottom: 2px solid var(--color-rosa-suave);
+}
+.logo { height: 56px; width: auto; display: block; }
+.menu { display: flex; gap: 0.5rem; }
+.enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  color: var(--color-texto);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radio-borde);
+}
+.enlace:hover { background: var(--color-rosa-suave); }

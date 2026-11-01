@@ -1,0 +1,8 @@
+.pie {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--color-celeste-suave);
+  color: var(--color-texto);
+}
+.pie p { margin: 0; }
+.marca { font-family: var(--fuente-marca); font-size: 2rem; color: var(--color-principal); }

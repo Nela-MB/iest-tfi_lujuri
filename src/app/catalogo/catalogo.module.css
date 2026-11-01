@@ -1,0 +1,19 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .grilla { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grilla { grid-template-columns: repeat(4, 1fr); }
+}
+.aviso {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radio-borde);
+  background: var(--color-celeste-suave);
+  color: var(--color-texto);
+}

@@ -1,0 +1,10 @@
+.etiqueta {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.disponible { background: var(--color-celeste-suave); color: var(--color-texto); }
+.quedanPocas { background: var(--color-rosa-suave); color: var(--color-texto); }
+.sinStock { background: var(--color-gris-suave); color: var(--color-texto-apoyo); }
