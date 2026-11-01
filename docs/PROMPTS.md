@@ -23,6 +23,9 @@
 | P5 | `[completar]` | `[completar]` | `[completar]` | `[completar]` | `[completar]` |
 
 ## Errores de la IA
+     error:confundio la ruta del Los tests ya están escritos. 
+     lo detecte: viendo la ruta antes de permitir; 
+     se corrigió. revisando cada pedido antes de aceptarlo, como pide tu constitución.
 
 ### E5. Un archivo de configuración enviado sin las dependencias
 
