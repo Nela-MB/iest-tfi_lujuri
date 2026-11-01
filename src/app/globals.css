@@ -11,6 +11,8 @@
   --color-texto-apoyo:   #5B6B82; /* Azul Grisáceo */
   --color-fondo:         #FBF5EF; /* Crema */
   --color-whatsapp:      #25D366; /* funcional */
+  --color-blanco:        #FFFFFF;
+  --color-gris-suave:    #E6E8EC; /* etiqueta sin stock */
 
   --fuente-marca:   var(--font-sacramento), cursive;
   --fuente-titulos: var(--font-cormorant), Georgia, serif;
@@ -34,3 +36,14 @@ h1, h2, h3 {
 }
 
 a { color: var(--color-principal); }
+
+:focus-visible {
+  outline: 3px solid var(--color-principal);
+  outline-offset: 2px;
+}
+
+.contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}

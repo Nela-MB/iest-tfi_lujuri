@@ -1,6 +1,9 @@
+import Link from "next/link";
+import estilos from "./inicio.module.css";
+
 export default function Inicio() {
   return (
-    <main style={{ padding: "2rem", textAlign: "center" }}>
+    <main className={estilos.inicio}>
       <img
         src="/marca/logo-lujuri.png"
         alt="Logo de LujUri Boutique: una percha con un corazón"
@@ -8,7 +11,10 @@ export default function Inicio() {
         height={240}
       />
       <h1>LujUri Boutique</h1>
-      <p>Tu estilo, con cariño. Muy pronto, nuestro catálogo online.</p>
+      <p>Ropa para mujer, hombre y niños. Elegí desde tu celular y recibila en tu casa.</p>
+      <Link href="/catalogo" className={estilos.boton}>
+        Ver el catálogo
+      </Link>
     </main>
   );
 }
