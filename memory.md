@@ -50,6 +50,7 @@
 - [ ] Número real de WhatsApp del negocio (va solo en `.env.local` y Vercel, en `WHATSAPP_NUMERO`).
 - [ ] Ciudad o zona de entrega (para `09-SEO.md` y `/contacto`).
 - [ ] Catálogo real: nombres, fotos, talles, colores y precios.
+- [x] Precios de las prendas de prueba cargados con `db/precios.sql`.
 - [ ] Horarios de atención.
 
 ## Preferencias de trabajo
@@ -65,6 +66,7 @@
 |---|---|---|
 | 09-10-2026 | Se redactó el kit de especificación y el informe del TP N° 3 | Cargar el logo en `marca/` y empezar la Etapa 1 de `08-TAREAS.md` |
 | 20-10-2026 | Se creó el repositorio del TFI, se corrigió el kit (carpeta `src/`, Vitest, variable `WHATSAPP_NUMERO`, número real fuera del repo) | Constitución, comandos, skills y primera spec |
+| 01-11-2026 | Se cargaron los precios de las prendas de prueba con `db/precios.sql` | Continuar con el catálogo |
 
 ## Cómo usar este archivo con el agente
 
