@@ -70,6 +70,7 @@ export default async function DetallePrenda({ params }) {
             alt={sinFoto ? "Isotipo de LujUri: una percha con un corazón" : `Foto de ${prenda.nombre}`}
             className={sinFoto ? estilos.reemplazo : estilos.imagen}
           />
+          {prenda.imagenIa ? <span className={estilos.leyenda}>Imagen generada con IA</span> : null}
         </div>
 
         <div className={estilos.info}>

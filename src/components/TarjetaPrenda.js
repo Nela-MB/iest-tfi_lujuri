@@ -23,6 +23,7 @@ export default function TarjetaPrenda({ prenda }) {
         <div className={estilos.etiqueta}>
           <EtiquetaStock estado={prenda.estado} />
         </div>
+        {prenda.imagenIa ? <span className={estilos.leyenda}>Imagen generada con IA</span> : null}
       </div>
       <h2 className={estilos.nombre}>{prenda.nombre}</h2>
       <p className={estilos.precio}>{formatearPrecio(prenda.precio)}</p>

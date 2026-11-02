@@ -37,6 +37,7 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 | R14 | Si la base de datos no responde, entonces el sistema deberá mostrar el mensaje «No pudimos cargar el catálogo, probá de nuevo en un rato» | RNF |
 | R15 | El sistema deberá mostrar la grilla en 1 columna en celular, 3 en tablet y 4 en computadora, con texto alternativo en cada imagen | RNF |
 | R16 | Mientras el stock total de una prenda sea de 4 unidades o más, el sistema deberá mostrar la etiqueta «Disponible» | RF10 |
+| R17 | Mientras la foto de una prenda esté marcada como generada con IA, el sistema deberá mostrar la leyenda «Imagen generada con IA» sobre la foto, en el catálogo y en el detalle | Transparencia |
 
 ## 4. Casos límite
 
@@ -57,7 +58,7 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 
 ## 6. Criterios de finalización
 
-- [ ] Los requisitos R1 a R16 están implementados o justificados como pendientes.
+- [ ] Los requisitos R1 a R17 están implementados o justificados como pendientes.
 - [ ] Hay tests automáticos para el filtro, la búsqueda, el cálculo del estado de stock y la validación de la API.
 - [ ] `npm test` y `npm run build` pasan sin errores.
 - [ ] Ningún color escrito a mano fuera de `globals.css`.

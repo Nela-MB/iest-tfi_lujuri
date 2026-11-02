@@ -24,6 +24,7 @@
 | `categoria` | `VARCHAR(10)` | `mujer`, `hombre` o `ninos` |
 | `precio` | `NUMERIC(12,2)` | Por defecto `0` (marcador) |
 | `imagen` | `VARCHAR(200)` | Ruta en `public/media/prendas/` |
+| `imagen_ia` | `BOOLEAN` | `TRUE` si la foto fue generada con IA (muestra la leyenda); por defecto `FALSE` |
 | `destacado` | `BOOLEAN` | Aparece en el inicio |
 | `activo` | `BOOLEAN` | Si está visible en el catálogo |
 
@@ -59,6 +60,7 @@ CREATE TABLE productos (
   categoria   VARCHAR(10) NOT NULL CHECK (categoria IN ('mujer', 'hombre', 'ninos')),
   precio      NUMERIC(12,2) DEFAULT 0,
   imagen      VARCHAR(200),
+  imagen_ia   BOOLEAN DEFAULT FALSE,
   destacado   BOOLEAN DEFAULT FALSE,
   activo      BOOLEAN DEFAULT TRUE
 );

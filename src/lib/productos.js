@@ -11,6 +11,7 @@ function prepararProducto(fila) {
     categoria: fila.categoria,
     precio: Number(fila.precio),
     imagen: fila.imagen,
+    imagenIa: Boolean(fila.imagen_ia),
     destacado: fila.destacado,
     variantes: fila.variantes ?? [],
   };
@@ -18,7 +19,7 @@ function prepararProducto(fila) {
 
 export async function listarProductos() {
   const filas = await sql`
-    SELECT p.id, p.codigo, p.nombre, p.descripcion, p.categoria, p.precio, p.imagen, p.destacado,
+    SELECT p.id, p.codigo, p.nombre, p.descripcion, p.categoria, p.precio, p.imagen, p.imagen_ia, p.destacado,
            COALESCE(
              json_agg(json_build_object('id', v.id, 'talle', v.talle, 'color', v.color, 'stock', v.stock))
              FILTER (WHERE v.id IS NOT NULL), '[]'
@@ -33,7 +34,7 @@ export async function listarProductos() {
 
 export async function obtenerProducto(id) {
   const filas = await sql`
-    SELECT p.id, p.codigo, p.nombre, p.descripcion, p.categoria, p.precio, p.imagen, p.destacado,
+    SELECT p.id, p.codigo, p.nombre, p.descripcion, p.categoria, p.precio, p.imagen, p.imagen_ia, p.destacado,
            COALESCE(
              json_agg(json_build_object('id', v.id, 'talle', v.talle, 'color', v.color, 'stock', v.stock))
              FILTER (WHERE v.id IS NOT NULL), '[]'

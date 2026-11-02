@@ -7,6 +7,7 @@
 .detalle { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 0.5rem; }
 @media (min-width: 640px) { .detalle { grid-template-columns: 1fr 1fr; } }
 .foto {
+  position: relative;
   background: var(--color-blanco);
   border-radius: var(--radio-borde);
   aspect-ratio: 4 / 5;
@@ -38,4 +39,15 @@
   border-radius: var(--radio-borde);
   background: var(--color-celeste-suave);
   color: var(--color-texto);
+}
+
+.leyenda {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-fondo);
+  color: var(--color-texto-apoyo);
+  font-size: 0.8rem;
 }

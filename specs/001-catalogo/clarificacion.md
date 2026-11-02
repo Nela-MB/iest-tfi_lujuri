@@ -24,3 +24,11 @@ El hallazgo 5 contradecía el principio 3 de `docs/CONSTITUCION.md`. Siguiendo e
 ## Qué decidió la IA y qué decidió la estudiante
 
 La IA propuso los hallazgos y una solución para cada uno. La estudiante pidió explicaciones de los puntos 4 y 5, comparó las dos opciones de arquitectura y eligió.
+
+## Cambio posterior durante el desarrollo (fase 7)
+
+Al cargar las primeras fotos del catálogo, la estudiante detectó un requisito nuevo: algunas fotos son reales y otras fueron generadas con IA, y las generadas con IA deben estar identificadas (Actividad 5 del Trabajo Final).
+
+| Qué se detectó | Decisión | Dónde se cambió primero |
+|---|---|---|
+| Hace falta distinguir las fotos generadas con IA | Agregar el campo `imagen_ia` a `productos` y mostrar la leyenda «Imagen generada con IA» | `spec.md` (requisito R17) y `docs/05-DATOS.md`; después el código |

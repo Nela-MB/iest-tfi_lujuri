@@ -7,6 +7,7 @@ CREATE TABLE productos (
   categoria   VARCHAR(10) NOT NULL CHECK (categoria IN ('mujer', 'hombre', 'ninos')),
   precio      NUMERIC(12,2) DEFAULT 0,
   imagen      VARCHAR(200),
+  imagen_ia   BOOLEAN DEFAULT FALSE,
   destacado   BOOLEAN DEFAULT FALSE,
   activo      BOOLEAN DEFAULT TRUE
 );
