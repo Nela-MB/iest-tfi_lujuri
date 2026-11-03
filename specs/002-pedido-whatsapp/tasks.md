@@ -4,7 +4,7 @@
 
 ## Lógica con tests
 
-- [ ] **T1. `carrito.js`** (R4, R5, R7, R8). Escribir primero `tests/carrito.test.js` y después `src/lib/carrito.js`.
+- [x] **T1. `carrito.js`** (R4, R5, R7, R8). Escribir primero `tests/carrito.test.js` y después `src/lib/carrito.js`.
   - Listo cuando: agregar una variante nueva crea la línea; agregar la misma suma cantidades sin pasar de 20 ni del stock; cambiar cantidad y quitar funcionan; contar y total orientativo dan bien; ninguna función modifica la lista original.
   - Commit: `agrega funciones del carrito con tests`
 
