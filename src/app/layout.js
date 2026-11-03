@@ -2,6 +2,7 @@ import { Sacramento, Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import Encabezado from "../components/Encabezado.js";
 import PieDePagina from "../components/PieDePagina.js";
+import { PedidoProvider } from "../context/PedidoContext.js";
 
 const sacramento = Sacramento({ weight: "400", subsets: ["latin"], variable: "--font-sacramento", display: "swap" });
 const cormorant = Cormorant_Garamond({ weight: ["500", "600", "700"], subsets: ["latin"], variable: "--font-cormorant", display: "swap" });
@@ -17,9 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${sacramento.variable} ${cormorant.variable} ${montserrat.variable}`}>
       <body>
-        <Encabezado />
-        {children}
-        <PieDePagina />
+        <PedidoProvider>
+          <Encabezado />
+          {children}
+          <PieDePagina />
+        </PedidoProvider>
       </body>
     </html>
   );

@@ -33,7 +33,7 @@
 
 ## Pantallas
 
-- [ ] **T7. `PedidoContext` y `ContadorPedido`** (R4, R10).
+- [x] **T7. `PedidoContext` y `ContadorPedido`** (R4, R10).
   - Listo cuando: el contador aparece en el encabezado de todas las páginas, sube al agregar y se conserva al recargar; con datos corruptos en `localStorage` arranca en 0 sin errores.
   - Commit: `agrega el estado del pedido y el contador en el encabezado`
 

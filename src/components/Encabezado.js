@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContadorPedido from "./ContadorPedido.js";
 import estilos from "./Encabezado.module.css";
 
 export default function Encabezado() {
@@ -14,6 +15,7 @@ export default function Encabezado() {
       <nav aria-label="Principal" className={estilos.menu}>
         <Link href="/" className={estilos.enlace}>Inicio</Link>
         <Link href="/catalogo" className={estilos.enlace}>Catálogo</Link>
+        <ContadorPedido />
       </nav>
     </header>
   );

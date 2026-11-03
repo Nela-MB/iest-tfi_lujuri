@@ -1,5 +1,48 @@
 // Actualiza el carrito sin mutarlo y calcula prendas y total orientativo (R4, R5, R7, R8).
 const MAXIMO_UNIDADES = 20;
+const CAMPOS_LINEA = [
+  "varianteId",
+  "productoId",
+  "nombre",
+  "categoria",
+  "talle",
+  "color",
+  "precio",
+  "stock",
+  "cantidad"
+];
+
+export function validarPedidoGuardado(pedido) {
+  return (
+    Array.isArray(pedido) &&
+    pedido.every((linea) => {
+      if (!linea || typeof linea !== "object" || Array.isArray(linea)) {
+        return false;
+      }
+
+      const campos = Object.keys(linea);
+      return (
+        campos.length === CAMPOS_LINEA.length &&
+        CAMPOS_LINEA.every((campo) => campos.includes(campo)) &&
+        Number.isInteger(linea.varianteId) &&
+        linea.varianteId > 0 &&
+        Number.isInteger(linea.productoId) &&
+        linea.productoId > 0 &&
+        typeof linea.nombre === "string" &&
+        typeof linea.categoria === "string" &&
+        typeof linea.talle === "string" &&
+        typeof linea.color === "string" &&
+        Number.isFinite(linea.precio) &&
+        linea.precio >= 0 &&
+        Number.isInteger(linea.stock) &&
+        linea.stock >= 0 &&
+        Number.isInteger(linea.cantidad) &&
+        linea.cantidad >= 1 &&
+        linea.cantidad <= MAXIMO_UNIDADES
+      );
+    })
+  );
+}
 
 export function agregarAlCarrito(carrito, variante) {
   if (variante.stock < 1) {

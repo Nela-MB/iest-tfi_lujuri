@@ -1,0 +1,16 @@
+.enlace {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border-radius: var(--radio-borde);
+  color: var(--color-texto);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enlace:hover {
+  background: var(--color-rosa-suave);
+}

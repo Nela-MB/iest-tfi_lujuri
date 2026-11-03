@@ -4,7 +4,8 @@ import {
   calcularTotalOrientativo,
   cambiarCantidad,
   contarPrendas,
-  quitarDelCarrito
+  quitarDelCarrito,
+  validarPedidoGuardado
 } from "../src/lib/carrito.js";
 
 const crearVariante = (datos = {}) => ({
@@ -23,6 +24,36 @@ const crearLinea = (datos = {}) => ({
   ...crearVariante(),
   cantidad: 2,
   ...datos
+});
+
+describe("validarPedidoGuardado", () => {
+  it("acepta una lista vacia", () => {
+    expect(validarPedidoGuardado([])).toBe(true);
+  });
+
+  it("acepta una lista de lineas validas", () => {
+    expect(validarPedidoGuardado([crearLinea()])).toBe(true);
+  });
+
+  it.each([
+    ["null", null],
+    ["un objeto", {}],
+    ["texto", "pedido"],
+    ["una lista con elementos que no son objetos", [null]],
+    ["una linea sin varianteId", [crearLinea({ varianteId: undefined })]],
+    ["una linea con varianteId no numerico", [crearLinea({ varianteId: "1" })]],
+    ["una linea sin cantidad", [crearLinea({ cantidad: undefined })]],
+    ["una linea con cantidad no numerica", [crearLinea({ cantidad: "2" })]],
+    ["una linea sin precio", [crearLinea({ precio: undefined })]],
+    ["una linea con precio no numerico", [crearLinea({ precio: "1200" })]],
+    ["una linea sin stock", [crearLinea({ stock: undefined })]],
+    ["una linea con stock no numerico", [crearLinea({ stock: "10" })]],
+    ["una linea con cantidad cero", [crearLinea({ cantidad: 0 })]],
+    ["una linea con cantidad mayor a 20", [crearLinea({ cantidad: 21 })]],
+    ["una linea con cantidad decimal", [crearLinea({ cantidad: 1.5 })]]
+  ])("rechaza %s", (_descripcion, pedido) => {
+    expect(validarPedidoGuardado(pedido)).toBe(false);
+  });
 });
 
 describe("funciones del carrito", () => {
