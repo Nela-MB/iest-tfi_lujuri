@@ -22,8 +22,9 @@
 
 ## Datos y API
 
-- [ ] **T5. `src/lib/pedidos.js`** (R12, R14, R15).
-  - Listo cuando: busca variantes con su prenda, precio y stock usando parámetros; guarda pedido y líneas en una sola operación; devuelve el id del pedido. Probado a mano con un pedido de prueba que aparece en Neon.
+- [X] **T5. `src/lib/pedidos.js`** (R12, R14, R15).
+  - Listo cuando: busca variantes con su prenda, precio y stock usando parámetros; guarda pedido y líneas en una sola operación; devuelve el id del pedido. Probado a mano con un pedido de prueba que aparece en Neon. 
+  prueba manual con la base pendiente: se hace junto con T6 y T11
   - Commit: `crea el modulo de pedidos con sql parametrizado`
 
 - [ ] **T6. `src/app/api/pedidos/route.js`** (R11 a R18, R21).
