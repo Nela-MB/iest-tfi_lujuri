@@ -47,7 +47,7 @@
 }
 
 .agotada {
-  color: var(--color-texto-apoyo);
+  color: var(--color-texto);
   background: var(--color-gris-suave);
 }
 

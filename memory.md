@@ -28,6 +28,7 @@
 | Fotos de prendas en `public/media/prendas/` | Había dos rutas distintas en `05` y `04` | `specs/001-catalogo/clarificacion.md` |
 | Consultas de prendas en `src/lib/productos.js` | Un solo módulo usado por páginas y API; menos código y mejor SEO | `docs/CONSTITUCION.md` |
 | «Quedan pocas» con 1 a 3 unidades de stock total | Umbral simple y fácil de probar | `specs/001-catalogo/clarificacion.md` |
+| Las opciones «Sin stock» usan `var(--color-texto)` sobre gris para cumplir contraste AA | El texto de apoyo no alcanzaba el ratio mínimo sobre ese fondo | `src/components/SelectorTalleColor.module.css` |
 
 ## Estado actual
 
@@ -40,7 +41,8 @@
 - [ ] Matriz de herramientas (Anexo I) y `docs/PROMPTS.md`.
 - [ ] Proyecto Next.js creado.
 - [x] Base de datos creada en Neon (5 tablas y 3 prendas de prueba).
-- [ ] Catálogo, pedido y contacto programados.
+- [x] Catálogo y pedido por WhatsApp programados.
+- [ ] Contacto programado.
 - [ ] Sitio publicado en Vercel.
 
 > La lista detallada de tareas está en `docs/08-TAREAS.md`.
@@ -67,6 +69,7 @@
 | 09-10-2026 | Se redactó el kit de especificación y el informe del TP N° 3 | Cargar el logo en `marca/` y empezar la Etapa 1 de `08-TAREAS.md` |
 | 20-10-2026 | Se creó el repositorio del TFI, se corrigió el kit (carpeta `src/`, Vitest, variable `WHATSAPP_NUMERO`, número real fuera del repo) | Constitución, comandos, skills y primera spec |
 | 01-11-2026 | Se cargaron los precios de las prendas de prueba con `db/precios.sql` | Continuar con el catálogo |
+| 03-11-2026 | Se completó T10 de la spec 002: revisión de marca, seguridad y accesibilidad; se corrigió el contraste de «Sin stock». Pasaron 112 tests y la revisión manual a 360 px y con teclado | Completar T11: verificación pendiente, configuración de producción y prueba real |
 
 ## Cómo usar este archivo con el agente
 

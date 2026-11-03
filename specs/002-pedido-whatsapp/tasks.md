@@ -47,7 +47,7 @@
 
 ## Cierre
 
-- [ ] **T10. Revisión de marca, seguridad y accesibilidad.** Usar la skill `revisar-marca` y repasar `docs/10-SEGURIDAD.md`.
+- [x] **T10. Revisión de marca, seguridad y accesibilidad.** Usar la skill `revisar-marca` y repasar `docs/10-SEGURIDAD.md`.
   - Listo cuando: no hay colores a mano, ningún secreto en el repositorio (`git grep` del número y de `DATABASE_URL`), se probó en 360 px y con teclado.
   - Commit: `revisa marca y seguridad del pedido`
 
