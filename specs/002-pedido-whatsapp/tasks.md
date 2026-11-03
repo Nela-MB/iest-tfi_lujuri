@@ -16,7 +16,7 @@
   - Listo cuando: `calcularTotalPedido` suma precio × cantidad con decimales correctos; `revisarStock` devuelve las líneas sin stock suficiente (o lista vacía si todo alcanza).
   - Commit: `agrega calculo de total y revision de stock del pedido`
 
-- [ ] **T4. `whatsapp.js`** (R16, R17). Test primero.
+- [x] **T4. `whatsapp.js`** (R16, R17). Test primero.
   - Listo cuando: el mensaje respeta el formato de `docs/02-REQUERIMIENTOS.md`; el enlace usa solo dígitos del número (`+54 9 11-1234` → `54911…`); el texto queda codificado con tildes, `&`, `#` y saltos de línea; sin número devuelve un error claro. Los tests usan un número **inventado**, nunca el real.
   - Commit: `agrega el mensaje y el enlace de whatsapp con tests`
 
