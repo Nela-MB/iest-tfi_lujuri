@@ -79,7 +79,7 @@ Datos: tablas `variantes`, `pedidos` y `pedido_items` (`docs/05-DATOS.md`). Segu
 
 | N.º | Decisión | Propuesta | Alternativa |
 |---|---|---|---|
-| D1 | ¿Se descuenta el stock al enviar el pedido? | **No.** La dueña confirma por WhatsApp y ajusta el stock a mano; así no se bloquea stock por pedidos que nunca se concretan | Descontar al guardar (más complejo, necesita cancelar y devolver) |
-| D2 | ¿Dónde se guarda el pedido mientras la clienta navega? | `localStorage` del navegador (sobrevive a recargas), solo ids, cantidades y datos para mostrar | Solo en memoria (se pierde al recargar) |
-| D3 | ¿Se vacía el pedido al enviarlo? | Sí, y se muestra el enlace por si WhatsApp no se abrió | Dejarlo hasta que la clienta lo vacíe |
-| D4 | ¿Se piden datos de la clienta? | No (R21) | Un campo opcional de nombre |
+| D1 | ¿Se descuenta el stock al enviar el pedido? | **No.** La dueña confirma por WhatsApp y ajusta el stock a mano; así no se bloquea stock por pedidos que nunca se concretan | Descontar al guardar (más complejo, necesita cancelar y devolver) | Aceptado
+| D2 | ¿Dónde se guarda el pedido mientras la clienta navega? | `localStorage` del navegador (sobrevive a recargas), solo ids, cantidades y datos para mostrar | Solo en memoria (se pierde al recargar) | Aceptado
+| D3 | ¿Se vacía el pedido al enviarlo? | Sí, y se muestra el enlace por si WhatsApp no se abrió | Dejarlo hasta que la clienta lo vacíe | Aceptado
+| D4 | ¿Se piden datos de la clienta? | No (R21) | Un campo opcional de nombre | Aceptado
