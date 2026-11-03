@@ -8,11 +8,11 @@
   - Listo cuando: agregar una variante nueva crea la línea; agregar la misma suma cantidades sin pasar de 20 ni del stock; cambiar cantidad y quitar funcionan; contar y total orientativo dan bien; ninguna función modifica la lista original.
   - Commit: `agrega funciones del carrito con tests`
 
-- [ ] **T2. `validarItemsPedido`** (R12, R13). Test primero en `tests/validaciones.test.js`.
+- [x] **T2. `validarItemsPedido`** (R12, R13). Test primero en `tests/validaciones.test.js`.
   - Listo cuando: acepta de 1 a 20 líneas válidas; rechaza lista vacía, más de 20 líneas, ids negativos, decimales o texto, cantidad 0, 21 o decimal, y variantes repetidas.
   - Commit: `agrega validacion de los items del pedido`
 
-- [ ] **T3. `totales.js`** (R12, R14). Test primero.
+- [x] **T3. `totales.js`** (R12, R14). Test primero.
   - Listo cuando: `calcularTotalPedido` suma precio × cantidad con decimales correctos; `revisarStock` devuelve las líneas sin stock suficiente (o lista vacía si todo alcanza).
   - Commit: `agrega calculo de total y revision de stock del pedido`
 
