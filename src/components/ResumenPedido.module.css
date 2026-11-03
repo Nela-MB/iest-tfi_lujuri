@@ -1,0 +1,95 @@
+.resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lista {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linea {
+  padding: 1rem;
+  border: 1px solid var(--color-linea);
+  border-radius: var(--radio-borde);
+  background: var(--color-blanco);
+}
+
+.nombre {
+  margin: 0 0 0.75rem;
+}
+
+.detalles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.detalles div {
+  min-width: 0;
+}
+
+.detalles dt {
+  color: var(--color-texto-apoyo);
+  font-size: 0.875rem;
+}
+
+.detalles dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.etiquetaCantidad {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.etiquetaCantidad input {
+  width: 6rem;
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radio-borde);
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.quitar {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-principal);
+  border-radius: var(--radio-borde);
+  background: transparent;
+  color: var(--color-principal);
+  font: inherit;
+  cursor: pointer;
+}
+
+.total {
+  margin: 0;
+  text-align: right;
+  font-size: 1.125rem;
+}
+
+.vacio {
+  margin: 0;
+  padding: 1rem;
+  border-radius: var(--radio-borde);
+  background: var(--color-celeste-suave);
+  color: var(--color-texto);
+}

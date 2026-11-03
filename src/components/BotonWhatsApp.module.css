@@ -1,0 +1,39 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.boton {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: var(--radio-borde);
+  background: var(--color-whatsapp);
+  color: var(--color-texto);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  cursor: wait;
+}
+
+.error {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: var(--radio-borde);
+  background: var(--color-rosa-suave);
+  color: var(--color-texto);
+}
+
+.exito {
+  margin: 0;
+  padding: 1rem;
+  border-radius: var(--radio-borde);
+  background: var(--color-celeste-suave);
+  color: var(--color-texto);
+}

@@ -1,0 +1,81 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.grupo legend {
+  margin-bottom: 0.5rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.opcion,
+.agotada {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radio-borde);
+  background: var(--color-blanco);
+}
+
+.opcion input,
+.agotada input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-principal);
+}
+
+.agotada {
+  color: var(--color-texto-apoyo);
+  background: var(--color-gris-suave);
+}
+
+.boton {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: var(--radio-borde);
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  cursor: not-allowed;
+}
+
+.ayuda {
+  margin: -0.5rem 0 0;
+  color: var(--color-texto-apoyo);
+}
+
+.estado {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: var(--radio-borde);
+  background: var(--color-celeste-suave);
+  color: var(--color-texto);
+}

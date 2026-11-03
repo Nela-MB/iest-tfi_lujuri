@@ -27,7 +27,7 @@
   prueba manual con la base pendiente: se hace junto con T6 y T11
   - Commit: `crea el modulo de pedidos con sql parametrizado`
 
-- [ ] **T6. `src/app/api/pedidos/route.js`** (R11 a R18, R21).
+- [x] **T6. `src/app/api/pedidos/route.js`** (R11 a R18, R21).
   - Listo cuando: responde `{ enlace, total, pedidoId }` con un pedido válido; responde 400 amable ante datos inválidos o sin stock; responde 500 amable si falta `WHATSAPP_NUMERO` (sin guardar) o si falla la base; ignora cualquier precio del navegador.
   - Commit: `crea la api de pedidos`
 
@@ -37,11 +37,11 @@
   - Listo cuando: el contador aparece en el encabezado de todas las páginas, sube al agregar y se conserva al recargar; con datos corruptos en `localStorage` arranca en 0 sin errores.
   - Commit: `agrega el estado del pedido y el contador en el encabezado`
 
-- [ ] **T8. `SelectorTalleColor` en `/catalogo/[id]`** (R1, R2, R3, R4).
+- [x] **T8. `SelectorTalleColor` en `/catalogo/[id]`** (R1, R2, R3, R4).
   - Listo cuando: el botón está desactivado hasta elegir talle y color; las variantes sin stock no se pueden elegir; al agregar aparece el aviso y sube el contador; se maneja con teclado.
   - Commit: `agrega el selector de talle y color al detalle`
 
-- [ ] **T9. `ResumenPedido`, `BotonWhatsApp` y `/pedido`** (R6 a R9, R18 a R20).
+- [x] **T9. `ResumenPedido`, `BotonWhatsApp` y `/pedido`** (R6 a R9, R18 a R20).
   - Listo cuando: se ve la lista con subtotales y total; se cambian cantidades y se quitan prendas; el pedido vacío muestra su mensaje; el botón se desactiva mientras envía, abre WhatsApp, vacía el pedido y muestra «¡Gracias!»; los errores se ven con `role="alert"`.
   - Commit: `crea la pagina de pedido con envio por whatsapp`
 

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import EtiquetaStock from "../../../components/EtiquetaStock.js";
+import SelectorTalleColor from "../../../components/SelectorTalleColor.js";
 import { rutaImagen } from "../../../components/TarjetaPrenda.js";
 import { obtenerProducto } from "../../../lib/productos.js";
 import { calcularEstadoStock } from "../../../lib/stock.js";
@@ -94,6 +95,20 @@ export default async function DetallePrenda({ params }) {
               ))}
             </ul>
           )}
+          <SelectorTalleColor
+            prenda={{
+              id: prenda.id,
+              nombre: prenda.nombre,
+              categoria: prenda.categoria,
+              precio: prenda.precio,
+              variantes: prenda.variantes.map((variante) => ({
+                id: variante.id,
+                talle: variante.talle,
+                color: variante.color,
+                stock: variante.stock
+              }))
+            }}
+          />
         </div>
       </article>
     </main>

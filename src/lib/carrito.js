@@ -106,3 +106,7 @@ export function calcularTotalOrientativo(carrito) {
     0
   );
 }
+
+export function crearItemsEnvio(carrito) {
+  return carrito.map(({ varianteId, cantidad }) => ({ varianteId, cantidad }));
+}
