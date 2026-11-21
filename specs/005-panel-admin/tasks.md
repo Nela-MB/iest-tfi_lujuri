@@ -4,7 +4,7 @@
 
 ## Tarea 0 · Documentos primero
 
-- [ ] **T0. Actualizar la documentación** (ver «Prompt T0» en `PROMPTS-COPILOT-004-005.md`).
+- [x] **T0. Actualizar la documentación** (ver «Prompt T0» en `PROMPTS-COPILOT-004-005.md`).
   - Listo cuando: `AGENTS.md`, `docs/01-CONTEXTO.md`, `02-REQUERIMIENTOS.md` (RF14 y RF15), `03-TECNOLOGIAS.md` (Vercel Blob y acceso propio), `04-ARQUITECTURA.md`, `10-SEGURIDAD.md`, `.env.example` y `memory.md` están actualizados y **vos los leíste y aprobaste**.
   - Commit: `actualiza la documentacion para sumar el panel de administracion`
 
