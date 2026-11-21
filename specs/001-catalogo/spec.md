@@ -54,7 +54,7 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`). Pantallas: `docs/0
 - Agregar prendas al pedido y elegir talle y color (spec 002).
 - Orden por precio y paginación.
 - Varias fotos por prenda.
-- Panel de administración: las prendas se cargan con SQL.
+- Panel de administración: el acceso visual se resolvió en la spec 005 y no pertenece a esta spec del catálogo.
 
 ## 6. Criterios de finalización
 

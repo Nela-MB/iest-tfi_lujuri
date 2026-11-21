@@ -43,8 +43,8 @@ Todas son personas que ya compran por Instagram y WhatsApp y valoran la atenció
 ## No incluye (por ahora)
 
 - Pago online (el pago se acuerda por WhatsApp).
-- Cuentas de usuario o inicio de sesión.
-- Panel de administración visual (los productos se cargan con SQL).
+- Cuentas de clientas (no hay inicio de sesión ni cuentas de usuario para clientas).
+- Panel de administración visual con una sola clave (spec 005); permite cargar prendas sin carga manual de SQL.
 - Cálculo automático del costo de envío.
 - Seguimiento del pedido en tiempo real.
 - Reseñas o comentarios de clientas.

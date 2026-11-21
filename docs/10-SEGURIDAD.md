@@ -26,6 +26,15 @@ WHATSAPP_NUMERO=+54XXXXXXXXXX
 - En producción se cargan desde el panel de Vercel.
 - El repositorio es **público**: en los archivos solo van valores de ejemplo, nunca el número ni las claves reales.
 
+## Panel de administración
+
+- La clave única vive en `ADMIN_CLAVE`; nunca se envía al navegador ni se escribe en el código.
+- `ADMIN_SECRETO` firma una cookie `httpOnly`, `secure` y `sameSite=strict`, válida 8 horas.
+- Cada página del panel y cada ruta `/api/admin/` comprueba la sesión en el servidor.
+- Las fotos se validan en el servidor: solo JPG, PNG y WEBP, máximo 4 MB.
+- Las páginas del panel llevan `noindex` y no tienen enlace desde el menú público.
+- Los intentos repetidos de clave se limitan con una espera de 1 segundo por intento. En Vercel no se garantiza contar intentos entre ejecuciones, por lo que se recomienda una clave larga.
+
 ## SQL seguro
 
 ```js

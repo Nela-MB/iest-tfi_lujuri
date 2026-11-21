@@ -25,7 +25,9 @@
 | Total del pedido calculado en el servidor | El navegador se puede manipular | `10-SEGURIDAD.md` |
 | Precios en `$ 0` como marcador | No inventar datos | `AGENTS.md` |
 | Pago por WhatsApp, sin pago online | Fuera del alcance por ahora | `01-CONTEXTO.md` |
-| Fotos de prendas en `public/media/prendas/` | Había dos rutas distintas en `05` y `04` | `specs/001-catalogo/clarificacion.md` |
+| Fotos de prendas en Vercel Blob | La publicación no permite escribir archivos en `public/`; las fotos anteriores se borran al reemplazar | `specs/005-panel-admin/spec.md` |
+| Acceso de administración con una sola clave | El panel necesita administración sin cuentas de clientas; usa clave y cookie firmada | `specs/005-panel-admin/spec.md` |
+| Las prendas no se borran: se desactivan | Evita perder prendas relacionadas con pedidos existentes | `specs/005-panel-admin/spec.md` |
 | Consultas de prendas en `src/lib/productos.js` | Un solo módulo usado por páginas y API; menos código y mejor SEO | `docs/CONSTITUCION.md` |
 | «Quedan pocas» con 1 a 3 unidades de stock total | Umbral simple y fácil de probar | `specs/001-catalogo/clarificacion.md` |
 | Las opciones «Sin stock» usan `var(--color-texto)` sobre gris para cumplir contraste AA | El texto de apoyo no alcanzaba el ratio mínimo sobre ese fondo | `src/components/SelectorTalleColor.module.css` |
@@ -38,6 +40,8 @@
 - [x] Repositorio público `iest-tfi_lujuri` creado en GitHub.
 - [x] Constitución redactada (`docs/CONSTITUCION.md`).
 - [x] Comandos `/spec`, `/clarificar`, `/verificar` y skills `verificar-criterios` y `revisar-marca` creados.
+- [x] Spec 004 (Quiénes somos) definida.
+- [x] Spec 005 (panel de administración) definida; documentación base actualizada en T0.
 - [ ] Matriz de herramientas (Anexo I) y `docs/PROMPTS.md`.
 - [ ] Proyecto Next.js creado.
 - [x] Base de datos creada en Neon (5 tablas y 3 prendas de prueba).

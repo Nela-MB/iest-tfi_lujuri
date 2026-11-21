@@ -115,16 +115,11 @@ Datos: tablas `productos` y `variantes` (`docs/05-DATOS.md`); **no hace falta cr
 
 ## 7. Decisiones a confirmar (la estudiante decide)
 
-| N.º | Decisión | Propuesta | Alternativa |
-|---|---|---|---|
-| D1 | ¿Dónde se guardan las fotos subidas? | **Vercel Blob** (gratis para empezar, integrado con Vercel; se agrega `@vercel/blob`) | aceptado
-Guardarlas en Neon como datos binarios: no suma tecnologías, pero es más lento y pesado |
-| D2 | ¿Cómo se ingresa? | **Una sola clave** compartida (la dueña), en la variable `ADMIN_CLAVE` | aceptado
- Usuarios con correo y contraseña (mucho más trabajo y no se pide) |
-| D3 | ¿Se pueden borrar prendas? | **No, solo desactivar** (hay pedidos que las referencian) | Borrar solo las que nunca fueron pedidas | aceptado
-| D4 | ¿Límite de la foto? | **4 MB** (límite de Vercel para enviar datos a una ruta es de 4,5 MB) | aceptado
- Subida directa desde el navegador sin ese límite (más compleja) |
-| D5 | ¿Código interno de prenda? | **Automático** por categoría |aceptado
- Que la dueña lo escriba |
-| D6 | ¿Ver pedidos en el panel? | **No ahora**; 
-se hace en una spec 006 | Incluirlo ya | aceptado
+| N.º | Decisión | Propuesta | Alternativa | Mi decisión |
+|---|---|---|---|---|
+| D1 | ¿Dónde se guardan las fotos subidas? | Vercel Blob | Guardarlas en Neon como datos binarios | Aceptada: propuesta |
+| D2 | ¿Cómo se ingresa? | Una sola clave compartida (ADMIN_CLAVE) | Usuarios con correo y contraseña | Aceptada: propuesta |
+| D3 | ¿Se pueden borrar prendas? | No, solo desactivar | Borrar solo las que nunca fueron pedidas | Aceptada: propuesta |
+| D4 | ¿Límite de la foto? | 4 MB (Vercel limita los datos a una ruta a 4,5 MB) | Subida directa desde el navegador, más compleja | Aceptada: propuesta |
+| D5 | ¿Código interno de prenda? | Automático por categoría | Que la dueña lo escriba | Aceptada: propuesta |
+| D6 | ¿Ver pedidos en el panel? | No ahora; se hace en una spec 006 | Incluirlo ya | Aceptada: propuesta |

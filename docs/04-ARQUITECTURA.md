@@ -15,7 +15,9 @@ iest-tfi_lujuri/
 ├── specs/                       ← una carpeta por funcionalidad (ciclo SDD)
 │   ├── 001-catalogo/            ← spec · clarificacion · plan · tasks · verificacion
 │   ├── 002-pedido-whatsapp/
-│   └── 003-consultas/
+│   ├── 003-consultas/
+│   ├── 004-quienes-somos/       ← spec · plan · tareas
+│   └── 005-panel-admin/         ← spec · plan · tareas
 ├── .github/                     ← arnés del agente (VS Code)
 │   ├── copilot-instructions.md  ← instrucciones permanentes (equivale a CLAUDE.md)
 │   └── prompts/                 ← comandos: spec · clarificar · verificar (.prompt.md)
@@ -32,10 +34,25 @@ iest-tfi_lujuri/
 │   │   │   └── [id]/page.js     ← detalle de una prenda
 │   │   ├── pedido/page.js       ← resumen del pedido y envío por WhatsApp
 │   │   ├── contacto/page.js     ← formulario de consulta
+│   │   ├── quienes-somos/page.js← historia y presentación de LujUri
+│   │   ├── admin/
+│   │   │   ├── layout.js        ← verifica la sesión y agrega noindex
+│   │   │   ├── page.js          ← lista todas las prendas
+│   │   │   ├── login/page.js    ← ingreso con la clave
+│   │   │   └── prenda/
+│   │   │       ├── nueva/page.js← carga una prenda nueva
+│   │   │       └── [id]/page.js ← edita prenda y variantes
 │   │   └── api/
 │   │       ├── productos/route.js   ← lista de prendas (con filtros)
 │   │       ├── pedidos/route.js     ← valida, calcula el total, guarda y arma el enlace
-│   │       └── consultas/route.js   ← guarda las consultas
+│   │       ├── consultas/route.js   ← guarda las consultas
+│   │       └── admin/
+│   │           ├── login/route.js  ← crea la sesión
+│   │           ├── logout/route.js ← cierra la sesión
+│   │           ├── productos/route.js ← crea prendas
+│   │           ├── productos/[id]/route.js ← edita prendas
+│   │           ├── variantes/route.js ← crea variantes
+│   │           └── variantes/[id]/route.js ← edita o quita variantes
 │   ├── components/
 │   │   ├── Encabezado.js        ← logo, menú y contador del pedido
 │   │   ├── PieDePagina.js       ← contacto, redes y entrega
@@ -55,7 +72,11 @@ iest-tfi_lujuri/
 │       ├── stock.js             ← calcula el estado de stock de una prenda
 │       ├── formato.js           ← formato de precios ($ 0,00)
 │       ├── whatsapp.js          ← arma el mensaje y el enlace de WhatsApp (servidor)
-│       └── validaciones.js      ← reglas de validación de pedidos y consultas
+│       ├── validaciones.js      ← reglas de validación de pedidos, consultas y panel
+│       ├── sesion.js            ← crea y verifica la sesión firmada
+│       ├── codigos.js           ← genera códigos como MUJ-009
+│       ├── fotos.js             ← sube y borra fotos en Vercel Blob
+│       └── admin.js             ← SQL del panel con parámetros
 ├── tests/                       ← tests automáticos con Vitest
 ├── db/
 │   ├── esquema.sql              ← creación de las tablas
@@ -81,12 +102,22 @@ iest-tfi_lujuri/
 | `.agents/skills/` | Skills propias del proyecto |
 | `src/app/` | Páginas del sitio y rutas de la API. Cada carpeta es una dirección web |
 | `src/app/api/` | Código del servidor: habla con la base y valida los datos |
+| `src/app/api/admin/` | Rutas de administración: requiere sesión en cada operación |
+| `/quienes-somos` | Página pública con la historia y presentación de LujUri |
+| `/admin` | Lista privada de todas las prendas y su estado |
+| `/admin/login` | Acceso privado con la única clave de administración |
+| `/admin/prenda/nueva` | Alta privada de una prenda |
+| `/admin/prenda/[id]` | Edición privada de una prenda y sus variantes |
 | `src/components/` | Piezas de pantalla reutilizables |
 | `src/context/` | Guarda el pedido mientras la clienta navega |
 | `src/lib/db.js` | **Único** lugar donde se conecta a PostgreSQL |
 | `src/lib/productos.js` | **Único** lugar donde se escriben las consultas de prendas |
 | `src/lib/whatsapp.js` | Genera el texto del pedido y el enlace `wa.me` en el servidor |
 | `src/lib/validaciones.js` | Funciones puras de validación, fáciles de probar |
+| `src/lib/sesion.js` | Crea y verifica la sesión firmada del panel |
+| `src/lib/codigos.js` | Genera códigos seguros de prendas por categoría |
+| `src/lib/fotos.js` | Sube y borra fotos en Vercel Blob |
+| `src/lib/admin.js` | Único módulo con SQL para prendas y variantes del panel |
 | `tests/` | Pruebas automáticas de totales, validaciones, filtros y mensaje de WhatsApp |
 | `db/` | Scripts SQL para crear tablas y cargar prendas |
 | `public/` | Imágenes y archivos que el navegador puede pedir directamente |
@@ -102,6 +133,11 @@ iest-tfi_lujuri/
 | `/catalogo/[id]` | Detalle de prenda con talle y color | RF04, RF05 |
 | `/pedido` | Resumen y envío por WhatsApp | RF06, RF07, RF08, RF09 |
 | `/contacto` | Formulario de consulta y datos de entrega | RF12, RF13 |
+| `/quienes-somos` | Historia y presentación de LujUri | RF14 |
+| `/admin/login` | Inicio de sesión del panel con una sola clave | RF15 |
+| `/admin` | Lista y estado de todas las prendas | RF15 |
+| `/admin/prenda/nueva` | Carga de prenda, foto, talles, colores y stock | RF15 |
+| `/admin/prenda/[id]` | Edición de prenda, foto, talles, colores y stock | RF15 |
 
 ## Reglas de organización
 

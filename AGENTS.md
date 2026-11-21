@@ -60,6 +60,11 @@ Los comandos están en `.github/prompts/` (se escriben con `/` en el chat) y las
 
 El logo y la paleta están en la carpeta `public/marca/`.
 
+| Specs vigentes | Archivos | Funcionalidad |
+|---|---|---|
+| 004 | `specs/004-quienes-somos/spec.md` | Página Quiénes somos |
+| 005 | `specs/005-panel-admin/spec.md` | Panel de administración con un único acceso |
+
 ## Reglas obligatorias
 
 ### Qué hacer
@@ -84,7 +89,7 @@ El logo y la paleta están en la carpeta `public/marca/`.
 - No inventar marcas reales, descuentos, talles ni datos de clientas.
 - No inventar datos para los gráficos: deben salir del repositorio.
 - No agregar tecnologías que no estén en `03-TECNOLOGIAS.md`.
-- No agregar pago online ni cuentas de usuario (quedan fuera por ahora).
+- No agregar pago online ni cuentas de clientas. Existe un único acceso de administración (spec 005).
 - No generar imágenes, voces ni videos de personas reales, ni imitar marcas, logos o artistas.
 - No ejecutar comandos ni instalar skills externas sin que la persona los lea antes.
 

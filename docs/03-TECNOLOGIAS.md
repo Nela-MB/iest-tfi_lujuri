@@ -14,6 +14,8 @@
 | Pruebas | **Vitest** | Tests automáticos con `npm test` | Es liviano, funciona con JavaScript moderno y permite probar totales, validaciones y filtros antes de programarlos |
 | Repositorio | **Git + GitHub** | Guarda el código y su historial | Permite volver a una versión anterior y mostrar un commit por tarea |
 | Publicación | **Vercel** | Publica el sitio con HTTPS | Se actualiza solo con cada `git push` y es gratis para proyectos chicos |
+| Almacenamiento de fotos | **Vercel Blob** | Guarda las fotos cargadas desde el panel | Evita escribir archivos en `public/` una vez publicado el sitio |
+| Acceso de administración | **Clave propia con cookie firmada** (`node:crypto`) | Permite un único acceso sin cuentas de clientas | No usa librerías ni servicios de login de terceros |
 | IA | **Agente de VS Code** (GitHub Copilot) y **Claude** (Anthropic) en chat aparte | El agente del editor programa y corre tests; Claude ayuda a redactar specs, guiones e informe | El agente lee `AGENTS.md`, `memory.md` y `.github/copilot-instructions.md` en cada sesión; Claude no necesita plan de Claude Code |
 
 ## Por qué le sirve a LujUri
@@ -49,6 +51,9 @@ Computadora (VS Code + agente) ──git push──► GitHub ──publica─�
 |---|---|---|
 | `DATABASE_URL` | `.env.local` y panel de Vercel (secreta) | Conexión a PostgreSQL |
 | `WHATSAPP_NUMERO` | `.env.local` y panel de Vercel (secreta) | Número de WhatsApp de la tienda; el servidor devuelve el enlace ya armado |
+| `ADMIN_CLAVE` | `.env.local` y panel de Vercel (secreta) | Clave del único acceso de administración |
+| `ADMIN_SECRETO` | `.env.local` y panel de Vercel (secreta) | Se usa para firmar y verificar la cookie del panel |
+| `BLOB_READ_WRITE_TOKEN` | `.env.local` y panel de Vercel (secreta) | Autoriza leer y escribir fotos en Vercel Blob |
 
 ## Comandos del proyecto
 
@@ -73,6 +78,7 @@ import { Sacramento, Cormorant_Garamond, Montserrat } from "next/font/google";
 - Vue, Angular y jQuery.
 - MongoDB y Firebase (la base es PostgreSQL).
 - Prisma y TypeScript, por ahora.
-- Pasarelas de pago y sistemas de login (quedan fuera por ahora).
+- Pasarelas de pago (quedan fuera por ahora).
+- Librerías o servicios de login de terceros (el acceso propio usa `node:crypto`).
 
 > Es una decisión del proyecto, no una regla eterna: si algo cambia, **primero se edita este archivo y después el código**.

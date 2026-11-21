@@ -19,6 +19,8 @@
 | RF11 | Página de inicio con logo, prendas destacadas y las tres categorías | Alta |
 | RF12 | Página de contacto con formulario de consulta, guardado en la base | Media |
 | RF13 | Informar cómo funciona la entrega a domicilio y cómo se coordina | Baja |
+| RF14 | Página Quiénes somos | Media |
+| RF15 | Panel de administración para cargar y editar prendas, fotos, talles, colores y stock | Alta |
 
 ## Requerimientos no funcionales (RNF)
 
