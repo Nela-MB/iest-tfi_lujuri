@@ -29,6 +29,8 @@ Es una página **estática** (sin base de datos). Pantallas y marca: `docs/06-DI
 | R8 | Si se muestra una imagen o ilustración, deberá llevar texto alternativo; si fue generada con IA, la leyenda «Imagen generada con IA» | Constitución |
 | R9 | La página deberá verse bien desde 360 px, con contraste AA y todos los textos en voseo con el tono de la marca | RNF |
 | R10 | El número de WhatsApp no deberá escribirse en el código: si hay botón de WhatsApp, deberá usar el flujo ya existente del sitio o el enlace de Instagram | Seguridad |
+| R11 | Cuando la pantalla mide menos de 768 px, el encabezado deberá mostrar el logo, el contador «Mi pedido (N)» y un botón con tres rayitas (menú hamburguesa) que despliegue los enlaces Inicio, Catálogo y Quiénes somos | RF14, RNF |
+| R12 | El botón del menú deberá ser accesible: nombre «Abrir menú» o «Cerrar menú», `aria-expanded`, área táctil de 44 × 44 px, uso con teclado (Enter y Espacio), cierre con Escape y cierre al elegir un enlace | RNF |
 
 ## 4. Casos límite
 
@@ -44,11 +46,12 @@ Es una página **estática** (sin base de datos). Pantallas y marca: `docs/06-DI
 
 ## 6. Criterios de finalización
 
-- [ ] R1 a R10 implementados o justificados.
+- [ ] R1 a R12 implementados o justificados.
 - [ ] Todos los datos del texto están confirmados por la estudiante.
 - [ ] `npm test` y `npm run build` pasan.
 - [ ] Skill `revisar-marca` aplicada: sin colores a mano, sin errores de nombre (siempre **LujUri**).
 - [ ] Se probó en 360 px y con teclado.
+- [ ] Se comprobó el menú hamburguesa por debajo de 768 px: apertura, cierre, tecla Escape y selección de un enlace; el contador «Mi pedido (N)» permanece visible.
 
 ## 7. Datos que faltan (respondelos vos, no los inventa la IA)
 
