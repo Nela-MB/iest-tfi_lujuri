@@ -1,0 +1,115 @@
+.pagina {
+  width: min(100% - 2rem, 900px);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.presentacion img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.presentacion h1 {
+  margin: 0.5rem 0 0;
+}
+
+.marca {
+  margin: 0;
+  color: var(--color-principal);
+  font-family: var(--fuente-marca);
+  font-size: 2.25rem;
+}
+
+.eslogan {
+  margin: 0;
+}
+
+.secciones {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.seccion {
+  padding: 1.25rem;
+  background: var(--color-rosa-suave);
+  border-radius: var(--radio-borde);
+}
+
+.seccion h2,
+.redes h2 {
+  margin-top: 0;
+}
+
+.seccion p:last-child {
+  margin-bottom: 0;
+}
+
+.pasos {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.redes h2 {
+  margin-bottom: 0;
+}
+
+.enlaceRed {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  overflow-wrap: anywhere;
+}
+
+.accion {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1.5rem;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: var(--color-detalle);
+}
+
+@media (min-width: 700px) {
+  .pagina {
+    padding-top: 3rem;
+  }
+
+  .secciones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

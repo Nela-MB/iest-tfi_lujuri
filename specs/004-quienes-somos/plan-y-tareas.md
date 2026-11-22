@@ -36,7 +36,7 @@ Es una página estática, así que no hay lógica para testear con Vitest. Las p
 
 ## Tareas
 
-- [ ] **T1. Página `/quienes-somos`** (R1 a R4, R6 a R10).
+- [x] **T1. Página `/quienes-somos`** (R1 a R4, R6 a R10).
   - Listo cuando: la página abre en `localhost:3000/quienes-somos`, tiene un solo `<h1>`, `metadata` propia, solo datos confirmados, y se ve bien en 360 px.
   - Commit: `crea la pagina quienes somos`
 
