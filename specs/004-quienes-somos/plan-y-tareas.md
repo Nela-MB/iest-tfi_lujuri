@@ -46,7 +46,7 @@ Es una página estática, así que no hay lógica para testear con Vitest. Las p
   - Listo cuando: «Quiénes somos» aparece en el menú y en el pie, se puede usar con teclado y no rompe el diseño del encabezado en 360 px.
   - Commit: `agrega el enlace a quienes somos en el menu y el pie`
 
-- [ ] **T2b. Menú hamburguesa en pantallas chicas** (R11, R12).
+- [x] **T2b. Menú hamburguesa en pantallas chicas** (R11, R12).
   - Listo cuando: en menos de 768 px los enlaces se esconden detrás del botón de tres rayitas; el menú abre y cierra, se cierra con Escape y al elegir un enlace; «Mi pedido (N)» sigue visible; en pantallas grandes el menú queda como está; se usa con teclado.
   - Commit: `agrega el menu hamburguesa en pantallas chicas`
 

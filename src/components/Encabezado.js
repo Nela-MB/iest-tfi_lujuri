@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ContadorPedido from "./ContadorPedido.js";
 import estilos from "./Encabezado.module.css";
+import MenuPrincipal from "./MenuPrincipal.js";
 
 export default function Encabezado() {
   return (
@@ -12,12 +13,12 @@ export default function Encabezado() {
           className={estilos.logo}
         />
       </Link>
-      <nav aria-label="Principal" className={estilos.menu}>
-        <Link href="/" className={estilos.enlace}>Inicio</Link>
-        <Link href="/catalogo" className={estilos.enlace}>Catálogo</Link>
-        <Link href="/quienes-somos" className={estilos.enlace}>Quiénes somos</Link>
-        <ContadorPedido />
-      </nav>
+      <div className={estilos.acciones}>
+        <MenuPrincipal />
+        <div className={estilos.contador}>
+          <ContadorPedido />
+        </div>
+      </div>
     </header>
   );
 }

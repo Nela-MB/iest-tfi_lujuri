@@ -1,0 +1,80 @@
+.menu {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.panel {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  border-radius: var(--radio-borde);
+  color: var(--color-texto);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enlace:hover {
+  background: var(--color-rosa-suave);
+}
+
+.boton {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radio-borde);
+  background: transparent;
+  color: var(--color-texto);
+  cursor: pointer;
+}
+
+.icono {
+  display: flex;
+  width: 24px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rayita {
+  width: 24px;
+  height: 2px;
+  border-radius: var(--radio-borde);
+  background: var(--color-texto);
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: block;
+    order: 2;
+  }
+
+  .boton {
+    display: inline-flex;
+  }
+
+  .panel {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid var(--color-rosa-suave);
+    background: var(--color-fondo);
+  }
+
+  .panelAbierto {
+    display: flex;
+  }
+}
