@@ -101,7 +101,7 @@
 }
 
 .boton:hover {
-  background: var(--color-detalle);
+  text-decoration: underline;
 }
 
 @media (min-width: 700px) {

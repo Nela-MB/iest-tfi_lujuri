@@ -40,7 +40,7 @@ Es una página estática, así que no hay lógica para testear con Vitest. Las p
   - Listo cuando: la página abre en `localhost:3000/quienes-somos`, tiene un solo `<h1>`, `metadata` propia, solo datos confirmados, y se ve bien en 360 px.
   - Commit: `crea la pagina quienes somos`
 
-- [ ] **T2. Enlaces en el encabezado y el pie** (R5).
+- [x] **T2. Enlaces en el encabezado y el pie** (R5).
   - Listo cuando: «Quiénes somos» aparece en el menú y en el pie, se puede usar con teclado y no rompe el diseño del encabezado en 360 px.
   - Commit: `agrega el enlace a quienes somos en el menu y el pie`
 

@@ -15,6 +15,7 @@ export default function Encabezado() {
       <nav aria-label="Principal" className={estilos.menu}>
         <Link href="/" className={estilos.enlace}>Inicio</Link>
         <Link href="/catalogo" className={estilos.enlace}>Catálogo</Link>
+        <Link href="/quienes-somos" className={estilos.enlace}>Quiénes somos</Link>
         <ContadorPedido />
       </nav>
     </header>

@@ -6,3 +6,14 @@
 }
 .pie p { margin: 0; }
 .marca { font-family: var(--fuente-marca); font-size: 2rem; color: var(--color-principal); }
+.enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  color: var(--color-texto);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radio-borde);
+}
+.enlace:hover { background: var(--color-rosa-suave); }
