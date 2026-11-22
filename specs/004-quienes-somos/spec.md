@@ -54,9 +54,9 @@ Es una página **estática** (sin base de datos). Pantallas y marca: `docs/06-DI
 
 | N.º | Dato | Tu respuesta |
 |---|---|---|
-| 1 | ¿Cómo y cuándo empezó LujUri? (una o dos frases reales) | LujUri comenzo en 2003 como un emprendimiento familiar buscando llevar variedad, moda y precios accesibles |
-| 2 | ¿Quién está detrás? ¿Se muestra el nombre o solo «el equipo de LujUri»? | no tenemos |
-| 3 | ¿Qué las diferencia? (por ejemplo, atención personalizada, entrega a domicilio) | no tenemos|
-| 4 | ¿Se puede nombrar la ciudad? (`09-SEO.md` menciona Tinogasta, pero pide confirmarlo) | si mencionalo|
-| 5 | ¿Qué redes tienen además de `@luj_uri`? | imstagram y pagina de facebook|
-| 6 | ¿Hay una foto real (del local, de la dueña o de las prendas) para la página? | si tenemos|
+| 1 | ¿Cómo y cuándo empezó LujUri? (una o dos frases reales) | LujUri comenzó en 2023 como un emprendimiento familiar, con la idea de llevar variedad, moda y precios accesibles. |
+| 2 | ¿Quién está detrás? ¿Se muestra el nombre o solo «el equipo de LujUri»? | El equipo de LujUri. |
+| 3 | ¿Qué las diferencia? | Atención personalizada, entrega a domicilio y cariño en cada elección para vos. |
+| 4 | ¿Se puede nombrar la ciudad? | Sí: Tinogasta, Catamarca. |
+| 5 | ¿Qué redes tienen además de `@luj_uri`? | Ninguna otra. La única red es Instagram: https://www.instagram.com/luj_uri/ |
+| 6 | ¿Hay una foto real para la página? | No tenemos. La página usa solo el logo de la marca. |
