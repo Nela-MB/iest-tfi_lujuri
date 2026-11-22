@@ -31,6 +31,7 @@ Es una página **estática** (sin base de datos). Pantallas y marca: `docs/06-DI
 | R10 | El número de WhatsApp no deberá escribirse en el código: si hay botón de WhatsApp, deberá usar el flujo ya existente del sitio o el enlace de Instagram | Seguridad |
 | R11 | Cuando la pantalla mide menos de 768 px, el encabezado deberá mostrar el logo, el contador «Mi pedido (N)» y un botón con tres rayitas (menú hamburguesa) que despliegue los enlaces Inicio, Catálogo y Quiénes somos | RF14, RNF |
 | R12 | El botón del menú deberá ser accesible: nombre «Abrir menú» o «Cerrar menú», `aria-expanded`, área táctil de 44 × 44 px, uso con teclado (Enter y Espacio), cierre con Escape y cierre al elegir un enlace | RNF |
+| R13 | El enlace de la página donde está la clienta deberá verse diferenciado en el menú, tanto en la fila de pantallas grandes como en el desplegable, con un estilo que no dependa solo del color (por ejemplo negrita y subrayado o una barra al costado) y con `aria-current="page"`. En una página interna, como una prenda del catálogo, deberá quedar marcado «Catálogo» | RF14, RNF |
 
 ## 4. Casos límite
 

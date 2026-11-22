@@ -50,6 +50,10 @@ Es una página estática, así que no hay lógica para testear con Vitest. Las p
   - Listo cuando: en menos de 768 px los enlaces se esconden detrás del botón de tres rayitas; el menú abre y cierra, se cierra con Escape y al elegir un enlace; «Mi pedido (N)» sigue visible; en pantallas grandes el menú queda como está; se usa con teclado.
   - Commit: `agrega el menu hamburguesa en pantallas chicas`
 
+  - [ ] **T2c. Resaltar la sección actual en el menú** (R13). Test primero.
+  - Listo cuando: una función pura decide qué enlace está activo (Inicio solo en `/`, Catálogo en `/catalogo` y en `/catalogo/4`, Quiénes somos en `/quienes-somos`); el enlace activo se ve distinto sin depender solo del color y lleva `aria-current="page"`, en el menú desplegable y en la fila de pantallas grandes.
+  - Commit: `resalta la seccion actual en el menu`
+
 - [ ] **T3. Revisión y publicación.** Usar la skill `revisar-marca`, correr `npm test` y `npm run build`, y probar en el celular.
   - Listo cuando: la tabla de la skill no marca faltantes y la página funciona en la dirección pública de Vercel.
   - Commit: `revisa marca y publica quienes somos`
