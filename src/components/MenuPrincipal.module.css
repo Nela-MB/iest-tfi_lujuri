@@ -19,6 +19,14 @@
   text-decoration: none;
 }
 
+.enlaceActivo {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--color-principal);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.3rem;
+}
+
 .enlace:hover {
   background: var(--color-rosa-suave);
 }
