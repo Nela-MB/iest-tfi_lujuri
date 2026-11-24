@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import estilos from "./quienes.module.css";
 
@@ -11,7 +12,7 @@ export default function QuienesSomos() {
   return (
     <main className={estilos.pagina}>
       <header className={estilos.presentacion}>
-        <img
+        <Image
           src="/marca/logo-lujuri.png"
           alt="Logo de LujUri Boutique"
           width={120}
