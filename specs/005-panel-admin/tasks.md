@@ -10,7 +10,7 @@
 
 ## Lógica con tests
 
-- [ ] **T1. `sesion.js`** (R2, R3, R6). Test primero.
+- [x] **T1. `sesion.js`** (R2, R3, R6). Test primero.
   - Listo cuando: un token creado con un secreto se verifica; uno vencido, alterado o firmado con otro secreto se rechaza; `compararClave` acepta la clave correcta y rechaza la incorrecta, vacía o `undefined`. Los tests usan secretos y claves **inventados**.
   - Commit: `agrega la sesion firmada del panel con tests`
 
