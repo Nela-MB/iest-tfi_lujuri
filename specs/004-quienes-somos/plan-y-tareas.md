@@ -54,6 +54,6 @@ Es una página estática, así que no hay lógica para testear con Vitest. Las p
   - Listo cuando: una función pura decide qué enlace está activo (Inicio solo en `/`, Catálogo en `/catalogo` y en `/catalogo/4`, Quiénes somos en `/quienes-somos`); el enlace activo se ve distinto sin depender solo del color y lleva `aria-current="page"`, en el menú desplegable y en la fila de pantallas grandes.
   - Commit: `resalta la seccion actual en el menu`
 
-- [ ] **T3. Revisión y publicación.** Usar la skill `revisar-marca`, correr `npm test` y `npm run build`, y probar en el celular.
+- [x] **T3. Revisión y publicación.** Usar la skill `revisar-marca`, correr `npm test` y `npm run build`, y probar en el celular.
   - Listo cuando: la tabla de la skill no marca faltantes y la página funciona en la dirección pública de Vercel.
   - Commit: `revisa marca y publica quienes somos`
