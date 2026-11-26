@@ -22,7 +22,7 @@
   - Listo cuando: con `MUJ-008` existente da `MUJ-009`; sin códigos da `MUJ-001`; mujer, hombre y niños usan `MUJ`, `HOM` y `NIN`; ignora códigos de otras categorías o mal formados.
   - Commit: `agrega el codigo automatico de prendas`
 
-- [ ] **T4. `rutaImagen` con direcciones completas** (R17). Test primero.
+- [x] **T4. `rutaImagen` con direcciones completas** (R17). Test primero.
   - Listo cuando: una dirección `https://...` se usa tal cual, un nombre de archivo sigue yendo a `/media/prendas/`, y sin imagen se usa el isotipo. Si hace falta, mover `rutaImagen` a `src/lib/` para poder testearla.
   - Commit: `permite fotos con direccion completa en el catalogo`
 
