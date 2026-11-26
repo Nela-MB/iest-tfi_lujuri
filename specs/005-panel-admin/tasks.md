@@ -18,7 +18,7 @@
   - Listo cuando: `validarProductoAdmin` controla nombre, descripción, categoría y precio (acepta «15000,50» y «15000.50»); `validarVarianteAdmin` controla talle, color y stock; `validarFoto` acepta JPG, PNG y WEBP de hasta 4 MB y rechaza el resto. Los mensajes están en voseo.
   - Commit: `agrega validaciones de prenda, variante y foto`
 
-- [ ] **T3. `codigos.js`** (R9). Test primero.
+- [x] **T3. `codigos.js`** (R9). Test primero.
   - Listo cuando: con `MUJ-008` existente da `MUJ-009`; sin códigos da `MUJ-001`; mujer, hombre y niños usan `MUJ`, `HOM` y `NIN`; ignora códigos de otras categorías o mal formados.
   - Commit: `agrega el codigo automatico de prendas`
 
