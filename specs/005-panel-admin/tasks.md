@@ -14,7 +14,7 @@
   - Listo cuando: un token creado con un secreto se verifica; uno vencido, alterado o firmado con otro secreto se rechaza; `compararClave` acepta la clave correcta y rechaza la incorrecta, vacía o `undefined`. Los tests usan secretos y claves **inventados**.
   - Commit: `agrega la sesion firmada del panel con tests`
 
-- [ ] **T2. Validaciones del panel** (R8, R13, R18, R22). Test primero en `tests/validaciones.test.js`.
+- [x] **T2. Validaciones del panel** (R8, R13, R18, R22). Test primero en `tests/validaciones.test.js`.
   - Listo cuando: `validarProductoAdmin` controla nombre, descripción, categoría y precio (acepta «15000,50» y «15000.50»); `validarVarianteAdmin` controla talle, color y stock; `validarFoto` acepta JPG, PNG y WEBP de hasta 4 MB y rechaza el resto. Los mensajes están en voseo.
   - Commit: `agrega validaciones de prenda, variante y foto`
 
