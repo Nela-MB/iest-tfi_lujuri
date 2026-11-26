@@ -54,4 +54,41 @@ describe("generarCodigoProducto", () => {
       expect(() => generarCodigoProducto(categoria, [])).toThrow();
     }
   );
+
+  it("permite que el codigo crezca a cuatro digitos", () => {
+    expect(generarCodigoProducto("mujer", ["MUJ-999"])).toBe("MUJ-1000");
+  });
+
+  it.each(["niños", "Mujer"])(
+    "rechaza la categoria con un formato no valido: %s",
+    (categoria) => {
+      expect(() => generarCodigoProducto(categoria, [])).toThrow();
+    }
+  );
+
+  it.each([null, undefined])(
+    "empieza en 001 si la lista de codigos es %s",
+    (codigosExistentes) => {
+      expect(() =>
+        generarCodigoProducto("mujer", codigosExistentes)
+      ).not.toThrow();
+      expect(generarCodigoProducto("mujer", codigosExistentes)).toBe("MUJ-001");
+    }
+  );
+
+  it("toma el numero mayor de una lista desordenada", () => {
+    expect(generarCodigoProducto("mujer", ["MUJ-007", "MUJ-002"])).toBe(
+      "MUJ-008"
+    );
+  });
+
+  it("interpreta correctamente codigos con ceros iniciales", () => {
+    expect(generarCodigoProducto("mujer", ["MUJ-0007"])).toBe("MUJ-008");
+  });
+
+  it("ignora codigos con numeros fuera del rango seguro", () => {
+    expect(
+      generarCodigoProducto("mujer", ["MUJ-99999999999999999999"])
+    ).toBe("MUJ-001");
+  });
 });

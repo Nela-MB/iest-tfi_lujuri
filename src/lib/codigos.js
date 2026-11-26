@@ -11,7 +11,9 @@ export function generarCodigoProducto(categoria, codigosExistentes) {
     throw new Error("La categoria no es valida.");
   }
 
-  if (!Array.isArray(codigosExistentes)) {
+  if (codigosExistentes === null || codigosExistentes === undefined) {
+    codigosExistentes = [];
+  } else if (!Array.isArray(codigosExistentes)) {
     throw new TypeError("Los codigos existentes deben ser una lista.");
   }
 
