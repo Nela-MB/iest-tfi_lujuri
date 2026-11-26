@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import EtiquetaStock from "../../../components/EtiquetaStock.js";
 import SelectorTalleColor from "../../../components/SelectorTalleColor.js";
-import { rutaImagen } from "../../../components/TarjetaPrenda.js";
+import { rutaImagen } from "../../../lib/imagen.js";
 import { obtenerProducto } from "../../../lib/productos.js";
 import { calcularEstadoStock } from "../../../lib/stock.js";
 import { formatearPrecio } from "../../../lib/formato.js";

@@ -1,14 +1,8 @@
 import Link from "next/link";
 import EtiquetaStock from "./EtiquetaStock.js";
 import { formatearPrecio } from "../lib/formato.js";
+import { rutaImagen } from "../lib/imagen.js";
 import estilos from "./TarjetaPrenda.module.css";
-
-export function rutaImagen(prenda) {
-  if (!prenda.imagen) {
-    return "/marca/isotipo-lujuri.png";
-  }
-  return prenda.imagen.startsWith("/") ? prenda.imagen : `/media/prendas/${prenda.imagen}`;
-}
 
 export default function TarjetaPrenda({ prenda }) {
   const sinFoto = !prenda.imagen;
